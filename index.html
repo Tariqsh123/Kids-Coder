@@ -20,23 +20,23 @@
   <meta property="og:url" content="">
   <meta property="og:title" content="Kids Coder | Learn, Play, Code">
   <meta property="og:description" content="Kids Coder - A fun and interactive platform where kids learn to code through play and creativity.">
-  <meta property="og:image" content="/images/favicon.png">
+  <meta property="og:image" content="/images/Logo.png">
 
   <!-- Twitter Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="">
   <meta name="twitter:title" content="Kids Coder | Learn, Play, Code">
   <meta name="twitter:description" content="Kids Coder - A fun and interactive platform where kids learn to code through play and creativity.">
-  <meta name="twitter:image" content="/images/favicon.png">
+  <meta name="twitter:image" content="/images/Logo.png">
 
   <!-- Apple iOS Settings -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="Kids Coder">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <link rel="apple-touch-icon" href="/images/favicon.png">
+  <link rel="apple-touch-icon" href="/images/Logo.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/Logo.png">
 
   <!-- Title -->
   <title>Kids Coder | Learn, Play, Code</title>
@@ -56,7 +56,7 @@
   <nav class="navbar navbar-expand-lg bg-light" >
     <div class="container-fluid">
         <a class="navbar-brand" href="index.html" title="">
-            <img src="https://www.thebravenext.com/Images/the-brave-next-main-logo.png" title="" alt=""id="logo">
+            <img src="/images/Logo.png" title="" alt=""id="logo">
           </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">MENU</button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -534,6 +534,208 @@ document.addEventListener('DOMContentLoaded', function () {
  <!-- Top Heading End-->
 <!-- Tailored App Development Services End -->
 
+<!-- Schedule a Call Section -->
+ <div id="schedule-a-call-section">
+    <div id="schedule-a-call-second">
+        <h3>Click, code, create! Your Coding journey starts now with Kids Coder!</h3>
+        <a href="Schedule-Demo.html">Schedule a Demo</a>
+    </div>
+ </div>
+<!-- Schedule a Call Section End -->
+
+<!-- Logo slider -->
+ <div id="enterprise-main-container">
+    <div id="enterprise-second-main-container">
+        <div id="enterprise-heading">High-Caliber Enterprise Solutions</div>
+        <div id="enterprise-img-container"></div>
+    </div>
+</div>
+ <script>
+const enterprise_images = [
+{ src: "./Images/Figma.png", alt: "Kids Coder Figma logo", title: "Kids Coder Figma logo" },
+{ src: "./Images/Flutter.png", alt: "Kids Coder Flutter logo", title: "Kids Coder Flutter logo" },
+{ src: "./Images/Dart.png", alt: "Kids Coder Dart logo", title: "Kids Coder Dart logo" },
+{ src: "./Images/MySQL.png", alt: "Kids Coder MySQL logo", title: "Kids Coder MySQL logo" },
+{ src: "./Images/Python.png", alt: "Kids Coder Python logo", title: "Kids Coder Python logo" },
+{ src: "./Images/MongoDB.png", alt: "Kids Coder MongoDB logo", title: "Kids Coder MongoDB logo" },
+{ src: "./Images/Js.png", alt: "Kids Coder JavaScript logo", title: "Kids Coder JavaScript logo" },
+{ src: "./Images/React.png", alt: "Kids Coder React logo", title: "Kids Coder React logo" },
+{ src: "./Images/Angular.png", alt: "Kids Coder Angular logo", title: "Kids Coder Angular logo" },
+{ src: "./Images/Nodejs.png", alt: "Kids Coder Node.js logo", title: "Kids Coder Node.js logo" },
+{ src: "./Images/Rails.png", alt: "Kids Coder Ruby on Rails logo", title: "Kids Coder Ruby on Rails logo" },
+{ src: "./Images/PHP.png", alt: "Kids Coder PHP logo", title: "Kids Coder PHP logo" },
+{ src: "./Images/Swift.png", alt: "Kids Coder Swift logo", title: "Kids Coder Swift logo" },
+{ src: "./Images/Kotlin.png", alt: "Kids Coder Kotlin logo", title: "Kids Coder Kotlin logo" },
+{ src: "./Images/Java.png", alt: "Kids Coder Java logo", title: "Kids Coder Java logo" },
+{ src: "./Images/Typescript.png", alt: "Kids Coder TypeScript logo", title: "Kids Coder TypeScript logo" },
+{ src: "./Images/Tensorflow.png", alt: "Kids Coder TensorFlow logo", title: "Kids Coder TensorFlow logo" },
+{ src: "./Images/Docker.png", alt: "Kids Coder Docker logo", title: "Kids Coder Docker logo" },
+{ src: "./Images/Redis.png", alt: "Kids Coder Redis logo", title: "Kids Coder Redis logo" },
+{ src: "./Images/GraphQL.png", alt: "Kids Coder GraphQL logo", title: "Kids Coder GraphQL logo" },
+{ src: "./Images/PostgreSQL.png", alt: "Kids Coder PostgreSQL logo", title: "Kids Coder PostgreSQL logo" },
+{ src: "./Images/firebase.png", alt: "Kids Coder Firebase logo", title: "Kids Coder Firebase logo" },
+{ src: "./Images/Jupiter-notebook.png", alt: "Kids Coder Jupyter Notebook logo", title: "Kids Coder Jupyter Notebook logo" },
+{ src: "./Images/Sass.png", alt: "Kids Coder Sass logo", title: "Kids Coder Sass logo" }
+];
+let enterprise_currentIndex = 0;
+const enterprise_imgContainer = document.getElementById("enterprise-img-container");
+function enterprise_showImages() {
+enterprise_imgContainer.innerHTML = "";
+const enterprise_imagesToShow = enterprise_images.slice(enterprise_currentIndex, enterprise_currentIndex + 6);
+enterprise_imagesToShow.forEach(image => {
+    const enterprise_img = document.createElement("img");
+    enterprise_img.src = image.src;  
+    enterprise_img.alt = image.alt;
+    enterprise_img.title = image.title;
+    enterprise_imgContainer.appendChild(enterprise_img);
+});
+enterprise_currentIndex += 6;
+if (enterprise_currentIndex >= enterprise_images.length) {
+    enterprise_currentIndex = 0;
+}
+}
+enterprise_showImages();
+
+setInterval(() => {
+enterprise_showImages();
+}, 2000);
+ </script>
+<!-- Logo slider End -->
+
+
+<!-- Latest News -->
+ <div id="latest-news-heading-main">
+    <h2>Stay updated with the latest tips, news, and tricks.</h2>
+ </div>
+
+ <div id="latest-news-card-container">
+    <div id="latest-news-second-container">
+        <!-- 1 -->
+        <div id="latest-news-card">
+            <img src="https://iapptechnologies.com/images/homepage/blogone.webp" alt="">
+            <h3>The Best Mobile App Development Company in Dubai</h3>
+        </div>
+        <!-- 2 -->
+        <div id="latest-news-card">
+            <img src="https://iapptechnologies.com/images/homepage/blogtwo.webp" alt="">
+            <h3>Mobile App Development: Your Ultimate Checklist for Success</h3>
+        </div>
+        <!-- 3 -->
+        <div id="latest-news-card">
+            <img src="https://iapptechnologies.com/images/homepage/blogthree.webp" alt="">
+            <h3>A comprehensive guide to hiring the best React JS developer</h3>
+        </div>
+    </div>
+ </div>
+<!-- Latest News -->
+
+
+<!-- FAQ -->
+<div id="latest-news-heading-main">
+    <h2>Explore the Latest Trends and Insights with Us</h2>
+ </div>
+
+
+ <div id="faq-main-container">
+    <div id="faq-second-main-container">
+        <div class="faq-item">
+            <div class="faq-question">What is Kids Coder?</div>
+            <div class="faq-answer">Kids Coder is a platform that introduces children to programming through fun and interactive activities.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">What age group is Kids Coder for?</div>
+            <div class="faq-answer">Kids Coder is designed for children aged 7 to 14, depending on their interest and reading level.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Do kids need prior coding experience?</div>
+            <div class="faq-answer">No previous experience is needed. Our lessons are beginner-friendly and progress step by step.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">What languages or tools are taught?</div>
+            <div class="faq-answer">We focus on Scratch, Python, and basic HTML/CSS depending on age and progression.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Are classes online or in-person?</div>
+            <div class="faq-answer">All classes are conducted online through live sessions and recorded tutorials.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">Is there any certification?</div>
+            <div class="faq-answer">Yes, children receive a digital certificate after completing each level of the course.</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">How do I enroll my child?</div>
+            <div class="faq-answer">You can sign up on our website by filling out a short form and selecting a course plan.</div>
+        </div>
+    </div>
+</div>
+<script>
+    const faqItems = document.querySelectorAll('.faq-item');
+
+    faqItems.forEach(item => {
+        item.querySelector('.faq-question').addEventListener('click', () => {
+            faqItems.forEach(i => {
+                if (i !== item) i.classList.remove('active');
+            });
+            item.classList.toggle('active');
+        });
+    });
+</script>
+
+<!-- FAQ -->
+
+
+<!-- Our Global Presence -->
+ <div id="our-global-heading-and-text-container">
+    <div id="our-global-heading-and-text-second-container">
+        <h2>Explore Our Global Presence</h2>
+        <p>Strategically located in key tech hubs worldwide, our offices are dedicated to delivering cutting-edge mobile solutions. Each location leverages local talent and insights to drive innovation and excellence in mobile development.</p>
+    </div>
+ </div>
+ <div id="global-main-container">
+    <div id="global-second-main-container">
+      <div id="global-main-left">
+        <h2 data-country="USA" data-address="3001 Bishop Drive, Suite 300, San Ramon, CA 94583" data-phone="+1 408 569 9515">USA</h2>
+        <h2 data-country="PAKISTAN" data-address="Plot # 44, Street 7, I-10/3, Islamabad" data-phone="+92 300 1234567">PAKISTAN</h2>
+        <h2 data-country="CANADA" data-address="123 King Street, Toronto, ON M5V 1A1" data-phone="+1 416 123 4567">CANADA</h2>
+        <h2 data-country="AUSTRALIA" data-address="45 George St, Sydney NSW 2000" data-phone="+61 2 9876 5432">AUSTRALIA</h2>
+      </div>
+  
+      <div id="global-main-right">
+        <img src="/images/roundmap.svg" alt="">
+        <div id="global-message-container">
+          <div id="global-message-box">
+            <h6>Registered Office - USA</h6>
+            <p>3001 Bishop Drive, Suite 300, San Ramon, CA 94583</p>
+            <a href="#">+1 408 569 9515</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const h2Elements = document.querySelectorAll('#global-main-left h2');
+    const messageBox = document.querySelector('#global-message-box');
+    const heading = messageBox.querySelector('h6');
+    const address = messageBox.querySelector('p');
+    const phone = messageBox.querySelector('a');
+    h2Elements.forEach(h2 => {
+      h2.addEventListener('mouseenter', () => {
+        h2Elements.forEach(el => el.classList.remove('active'));
+        h2.classList.add('active');
+        const country = h2.getAttribute('data-country');
+        const addr = h2.getAttribute('data-address');
+        const ph = h2.getAttribute('data-phone');
+        heading.textContent = `Registered Office - ${country}`;
+        address.textContent = addr;
+        phone.textContent = ph;
+      });
+    });
+  </script>
+  
+    
+<!-- Our Global Presence End -->
+
 
 
  <!-- Footer -->
@@ -622,7 +824,7 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="last-footer-main-container">
    <div id="last-footer-top">
        <div id="last-footer-top-left">
-           <img src="/images/img-logo.svg" title="" alt=""/>
+           <img src="/images/Logo.png" title="" alt=""/>
            <button>Contact Us</button>
        </div>
        <div id="last-footer-top-right">
@@ -634,7 +836,7 @@ document.addEventListener('DOMContentLoaded', function () {
            <div id="contact-container">
                <img src="https://img.icons8.com/ios-filled/100/FFFFFF/whatsapp--v1.png" alt="" title="">
                <p id="footer-whatsapp-link">
-                   <a style="color: #ffc41b;text-decoration:none;" href="#" title=""> + 447463151997</a>
+                   <a style="color: #f9ca29;text-decoration:none;" href="#" title=""> + 447463151997</a>
                  </p>
                  
            </div>
@@ -655,13 +857,30 @@ document.addEventListener('DOMContentLoaded', function () {
 <!-- Last Footer END -->
 
 
-
+<!-- Back To Top -->
+ <div id="back-to-top-container">
+    <div id="back-to-top-button">↑</div>
+ </div>
+ <script>
+    window.addEventListener("scroll", function () {
+        const btnContainer = document.getElementById("back-to-top-container");
+        if (window.scrollY > 200) {
+            btnContainer.style.display = "flex";
+        } else {
+            btnContainer.style.display = "none";
+        }
+    });
+    document.getElementById("back-to-top-button").addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+ </script>
+<!-- Back To Top -->
 
 <!-- Whatsapp Popup -->
 <div id="whatsapp-popup-main-container">
     <span onclick="closeWhatsappPopup()">X</span>
     <div id="whatsapp-icon-container">
-      <img src="https://img.icons8.com/?size=100&id=16733&format=png&color=ff8d00" alt="">
+      <img src="https://img.icons8.com/?size=100&id=16733&format=png&color=f9ca29" alt="">
       <a id="Whatsapp-number" href="https://api.whatsapp.com/send?phone=447463151997" target="_blank" title="Whatsapp Number">+ 447463151997</a>
     </div>
     <p>Please send your query or requirements in detail via whatsapp, and we will respond shortly. <br> Thank you!</p>
@@ -690,9 +909,11 @@ document.addEventListener('DOMContentLoaded', function () {
   </script>
   <!-- Whatsapp Popup -->
 
-
- <!-- Chat BOt Tidio -->
- <script src="//code.tidio.co/cnnxmbi5u0n8izbjwf9vwtm7gnfiqlot.js" async></script>
+<!-- Whatsapp Floating right -->
+ <div id="whatsapp-float-right">
+    <a href="https://api.whatsapp.com/send?phone=447463151997" title="Whatsapp-Link"><img src="/images/whatsapp.png" alt="Whatsapp-icon" title="Whatsapp icon"></a>
+ </div>
+<!-- Whatsapp Floating right -->
 
 <!-- Bootstrap Link -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

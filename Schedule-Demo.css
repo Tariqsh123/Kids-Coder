@@ -29,7 +29,7 @@
     color: white;
 }
 #schedule-top-container h2{
-    color: #ffc41b;
+    color: #f9ca29;
     font-weight: 900;
 }
 #schedule-top-container p{
@@ -192,7 +192,7 @@
     justify-content: space-between;
 }
 #schedule-container-right-main h1{
-    color: #ffc41b;
+    color: #f9ca29;
     position: relative;
     height: 100px;
     width: 100%;

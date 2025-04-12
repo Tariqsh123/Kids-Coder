@@ -20,23 +20,23 @@
   <meta property="og:url" content="">
   <meta property="og:title" content="Kids Coder | Learn, Play, Code">
   <meta property="og:description" content="Kids Coder - A fun and interactive platform where kids learn to code through play and creativity.">
-  <meta property="og:image" content="/images/favicon.png">
+  <meta property="og:image" content="/images/Logo.png">
 
   <!-- Twitter Meta Tags -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:url" content="">
   <meta name="twitter:title" content="Kids Coder | Learn, Play, Code">
   <meta name="twitter:description" content="Kids Coder - A fun and interactive platform where kids learn to code through play and creativity.">
-  <meta name="twitter:image" content="/images/favicon.png">
+  <meta name="twitter:image" content="/images/Logo.png">
 
   <!-- Apple iOS Settings -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-title" content="Kids Coder">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <link rel="apple-touch-icon" href="/images/favicon.png">
+  <link rel="apple-touch-icon" href="/images/Logo.png">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/Logo.png">
 
   <!-- Title -->
   <title>Privacy | Kids Coder</title>
@@ -57,7 +57,7 @@
   <nav class="navbar navbar-expand-lg bg-light" >
     <div class="container-fluid">
         <a class="navbar-brand" href="index.html" title="">
-            <img src="https://www.thebravenext.com/Images/the-brave-next-main-logo.png" title="" alt=""id="logo">
+            <img src="/images/Logo.png" title="" alt=""id="logo">
           </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">MENU</button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
@@ -253,7 +253,7 @@ document.addEventListener('DOMContentLoaded', function () {
 <div id="last-footer-main-container">
    <div id="last-footer-top">
        <div id="last-footer-top-left">
-           <img src="/images/img-logo.svg" title="" alt=""/>
+           <img src="/images/Logo.png" title="" alt=""/>
            <button>Contact Us</button>
        </div>
        <div id="last-footer-top-right">
@@ -285,7 +285,24 @@ document.addEventListener('DOMContentLoaded', function () {
 </div>
 <!-- Last Footer END -->
 
-
+<!-- Back To Top -->
+<div id="back-to-top-container">
+    <div id="back-to-top-button">↑</div>
+ </div>
+ <script>
+    window.addEventListener("scroll", function () {
+        const btnContainer = document.getElementById("back-to-top-container");
+        if (window.scrollY > 200) {
+            btnContainer.style.display = "flex";
+        } else {
+            btnContainer.style.display = "none";
+        }
+    });
+    document.getElementById("back-to-top-button").addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+ </script>
+<!-- Back To Top -->
 
 
 <!-- Whatsapp Popup -->
@@ -320,10 +337,12 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   </script>
   <!-- Whatsapp Popup -->
+<!-- Whatsapp Floating right -->
+<div id="whatsapp-float-right">
+    <a href="https://api.whatsapp.com/send?phone=447463151997" title="Whatsapp-Link"><img src="/images/whatsapp.png" alt="Whatsapp-icon" title="Whatsapp icon"></a>
+ </div>
+<!-- Whatsapp Floating right -->
 
-
- <!-- Chat BOt Tidio -->
- <script src="//code.tidio.co/cnnxmbi5u0n8izbjwf9vwtm7gnfiqlot.js" async></script>
 
 <!-- Bootstrap Link -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
