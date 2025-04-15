@@ -58,13 +58,6 @@
                 <li class="nav-item">
                     <a class="nav-link" id="technology-first-nav-item"  href="#" title="">Instructor <span id="dot"></span></a>
                 </li>
-                <!-- <li class="nav-item">
-                    <a class="nav-link" id="customer-first-nav-item" href="#" title="">Health Care <span id="dot"></span>    </a>
-                </li>
-              
-                <li class="nav-item">
-                    <a class="nav-link" id="company-first-nav-item" href="#" title="">Data Science<span id="dot"></span></a>
-                </li> -->
                 <li class="nav-item">
                     <a class="nav-link" id="company-first-nav-item" href="#" title="" >Blog <span id="dot"></span></a>
                 </li>
@@ -98,7 +91,7 @@ document.addEventListener('DOMContentLoaded', function () {
 <!-- Navbar END -->
 
 
-   <section class="hero-section">
+   <!-- <section class="hero-section">
  <div class="container full-width">
     <div class="table-content">
        <div class="col-md-6 pad-l-0 labtop-bg"></div>
@@ -154,7 +147,78 @@ document.addEventListener('DOMContentLoaded', function () {
        </div>
     </div>
  </div>
-</section>
+</section> -->
+
+<!-- HEro Section -->
+ <div id="Hero-section-main-container">
+    <div id="hero-section-second-main-container">
+        <div id="hero-section-left">
+            <h6>Coding for Kids Online</h6>
+            <h1>Future <span> innovators </span> are born here</h1>
+            <h5>Join our community of over 100,000 students</h5>
+            <div id="header-left-button-container">
+                <div id="header-left-button-inner">
+                    <button><span>Self-Paced-Courses</span></button>
+                    <p>Start Free 14-Day Trial</p>
+                </div>
+                <div id="header-left-button-inner">
+                <button><span>1-on-1 Lessons</span> </button>
+                <p>Get Your First Class Free</p>
+                </div>
+            </div>
+            <div id="header-left-bottom-section">
+                <img src="https://codakid.com/wp-content/uploads/2022/09/Google.png" alt="">
+                <img src="/images/Header-left-bottom-5-stars.png" alt="">
+                <p>4.9 out of 5 based on hundreds of reviews</p>
+            </div>
+        </div>
+        <div id="hero-section-right">
+            <img src="/images/Header-right-bg.png" alt="">
+            <img id="second-img" src="" alt="">
+        </div>
+        
+        <style>
+        #second-img {
+            transition: opacity 0.8s ease-in-out;
+        }
+        </style>
+        
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const baseImages = [
+                    "/images/Header-Right-Float-img1.png",
+                    "/images/Header-Right-Float-img2.png",
+                    "/images/Header-Right-Float-img3.png",
+                    "/images/Header-Right-Float-img4.png",
+                    "/images/Header-Right-Float-img5.png"
+                ];
+                
+                const images = Array(10).fill(baseImages).flat();
+                let headercurrentIndex = 0;
+                const secondImg = document.getElementById('second-img');
+                secondImg.src = images[headercurrentIndex];
+            
+                function changeImage() {
+                    headercurrentIndex = (headercurrentIndex + 1) % images.length;
+                    secondImg.style.opacity = 0;
+            
+                    setTimeout(() => {
+                        secondImg.src = images[headercurrentIndex];
+                        secondImg.style.opacity = 1;
+                    }, 500);
+                }
+            
+                setInterval(changeImage, 10000);
+            });
+            
+        </script>
+        
+        
+        
+    </div>
+ </div>
+<!-- HEro Section End -->
+
 <div class="container m-width">
     <div class="spad">
        <div class="flexboxabout text-center">
@@ -667,7 +731,8 @@ enterprise_showImages();
                 const a = i.querySelector('.faq-answer');
                 if (i !== item) {
                     i.classList.remove('active');
-                    a.style.height = 0;
+                    a.style.maxHeight = '0';
+                    a.style.opacity = '0';
                 }
             });
     
@@ -675,13 +740,15 @@ enterprise_showImages();
             item.classList.toggle('active');
     
             if (isActive) {
-                answer.style.height = 0;
+                answer.style.maxHeight = '0';
+                answer.style.opacity = '0';
             } else {
-                const fullHeight = answer.scrollHeight + "px";
-                answer.style.height = fullHeight;
+                answer.style.maxHeight = answer.scrollHeight + 'px';
+                answer.style.opacity = '1';
             }
         });
     });
+    
     
 </script>
 
@@ -723,6 +790,7 @@ enterprise_showImages();
     const heading = messageBox.querySelector('h6');
     const address = messageBox.querySelector('p');
     const phone = messageBox.querySelector('a');
+    
     h2Elements.forEach(h2 => {
       h2.addEventListener('mouseenter', () => {
         h2Elements.forEach(el => el.classList.remove('active'));
@@ -735,7 +803,14 @@ enterprise_showImages();
         phone.textContent = ph;
       });
     });
+  
+    // Trigger 'mouseenter' for the USA country on load
+    const usaElement = document.querySelector('h2[data-country="USA"]');
+    if (usaElement) {
+      usaElement.dispatchEvent(new Event('mouseenter'));
+    }
   </script>
+  
   
     
 <!-- Our Global Presence End -->
