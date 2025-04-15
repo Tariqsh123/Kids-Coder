@@ -48,9 +48,108 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">MENU</button>
         <div class="collapse navbar-collapse" id="navbarNavDropdown">
             <ul class="navbar-nav">        
-                <li class="nav-item">
-                    <a class="nav-link" id="first-nav-item" href="#" title="">Courses <span id="dot"></span></a>
-                </li>
+           <!-- RESOURCE                  -->
+           <li class="nav-item" id="hide-nav-item">
+            <a class="nav-link" id="resource-first-nav-item" class="drop-item" onclick="resourceToggleDropdown()">Courses<span id="dot"></span></a>
+                <div class="resource-dropdown-content" id="resource-dropdown-menu">
+                    <span class="resource-close-button" onclick="resourceCloseDropdown()">x</span> 
+                        <div id="resource-product-dropdown-container">
+                            <div id="resource-product-dropdown-mid">
+                                <div id="resource-product-dropdown-mid-top">
+                                    <h6 class="resource-hoverable" id="resource-product-dropdown-content1"><a href="#">Data Analytics</a></h6>
+                                    <h6 class="resource-hoverable" id="resource-product-dropdown-content2"><a href="#">Digital Marketing</a></h6>
+                                    <h6 class="resource-hoverable" id="resource-product-dropdown-content3"><a href="#">Web Development</a></h6>
+                                    <h6 class="resource-hoverable" id="resource-product-dropdown-content4"><a href="#">Cyber Security</a></h6>
+                                    <h6 class="resource-hoverable" id="resource-product-dropdown-content5"><a href="#">App Development</a></h6>
+                                </div>
+                                <div id="resource-product-dropdown-mid-bottom">
+                                    <div id="resource-product-dropdown-mid-bottom-container">
+                                        <div id="resource-product-dropdown-mid-bottom-container-follow-container">
+                                            <span id="dot"></span> <h6 >Follow Us</h6>
+                                        </div>
+                                        <div id="resource-product-dropdown-mid-bottom-container-icon">
+                                            <a href="#" class="resource-linkedin-icon">
+                                                <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/facebook-f.png" title="Facebook icon" alt="Facebook icon"/>
+                                            </a>
+                                            <a href="#" class="resource-linkedin-icon">
+                                                <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/twitterx--v2.png" title="Twitter icon" alt="Twitter icon"/>
+                                            </a>
+                                            <a href="#" class="resource-linkedin-icon">
+                                                <img width="50" height="50"  src="https://img.icons8.com/ios-filled/50/instagram-new--v1.png"  title="Instagram icon" alt="Instagram icon"/>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div id="resource-product-dropdown-right">
+                                <div id="resource-product-dropdown-right-container">
+                                    <div id="resource-product-image"></div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+        </li>
+        <!-- RESOURCE END-->
+
+        <script>
+            // RESOURCE
+function resourceToggleDropdown() {
+    var resourceDropdownMenu = document.getElementById('resource-dropdown-menu');
+    if (resourceDropdownMenu.style.display === 'block') {
+        resourceCloseDropdown();
+    } else {
+        resourceDropdownMenu.style.display = 'block'; 
+    }
+}
+function resourceCloseDropdown() {
+    var resourceDropdownMenu = document.getElementById('resource-dropdown-menu');
+    resourceDropdownMenu.style.display = 'none'; 
+}
+document.addEventListener('click', function(event) {
+    var resourceDropdownMenu = document.getElementById('resource-dropdown-menu');
+    var resourceDropdownToggle = document.getElementById('resource-nav-item');
+    if (resourceDropdownMenu && resourceDropdownToggle && 
+        !resourceDropdownMenu.contains(event.target) && 
+        !resourceDropdownToggle.contains(event.target)) {
+        resourceCloseDropdown(); 
+    }
+});
+document.addEventListener('keydown', function(event) {
+    if (event.key === "Escape") {
+        resourceCloseDropdown();
+    }
+});
+// RESOURCE IMAGE
+const resourceImages = {
+    "resource-product-dropdown-content1": "https://d1ng1bucl7w66k.cloudfront.net/ghost-blog/2023/06/Screen-Shot-2023-06-20-at-5.21.51-PM.png",
+    "resource-product-dropdown-content2": "https://www.kiddy123.com/custom/domain_1/image_files/sitemgr_photo_55002.jpg",
+    "resource-product-dropdown-content3": "https://d1ng1bucl7w66k.cloudfront.net/ghost-blog/2021/10/Screen-Shot-2021-10-26-at-4.12.49-PM.png",
+    "resource-product-dropdown-content4": "https://ociso.ucla.edu/sites/default/files/styles/sf_landscape_16x9/public/media/images/january-security-privacy-online_v3_0.png?h=b508fa70&itok=L1hIhBmL",
+    "resource-product-dropdown-content5": "https://miro.medium.com/v2/resize:fit:500/1*x2YA9tPfUSD1DtKGq7q6_g.png"
+};
+const resourceProductImage = document.getElementById('resource-product-image');
+if (resourceProductImage) {
+    resourceProductImage.style.backgroundImage = `url(${resourceImages["resource-product-dropdown-content1"]})`;
+}
+const resourceHoverableElements = document.querySelectorAll('.resource-hoverable');
+resourceHoverableElements.forEach(element => {
+    element.addEventListener('mouseover', function() {
+        const resourceImageId = this.id; 
+        const resourceImagePath = resourceImages[resourceImageId]; 
+        if (resourceImagePath) {
+            resourceProductImage.style.backgroundImage = `url(${resourceImagePath})`; 
+        }
+    });
+});
+document.addEventListener('click', function(event) {
+    var resourceDropdownMenu = document.getElementById('resource-dropdown-menu');
+    var resourceLink = document.getElementById('resource-first-nav-item');
+    if (!resourceDropdownMenu.contains(event.target) && !resourceLink.contains(event.target)) {
+        resourceDropdownMenu.style.display = 'none';
+    }
+});
+// RESOURCE DROP DOWN END
+        </script>
                 <li class="nav-item">
                     <a class="nav-link" id="industry-first-nav-item" href="#" title="">Articles<span id="dot"></span></a>
                 </li>

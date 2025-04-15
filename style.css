@@ -142,9 +142,9 @@ html, body {
     border-left: 1px solid white;
     position: relative;
 }
-#hide-nav-item{
+/* #hide-nav-item{
     display: none;
-}
+} */
 #first-nav-item {
     border-left: 1px solid transparent;
 }
@@ -363,10 +363,208 @@ html, body {
         width: 45%;
     }
 }
-
-
-/* Dropdoen */
-
+/* RESOURCE DROPDOWN CONTENT */
+.resource-dropdown-content {
+    display: none; 
+    position: fixed; 
+    top: 70px; 
+    left: 0; 
+    width: 100vw; 
+    height: 70vh; 
+    background-color: #000; 
+    box-shadow: 1px 1px 5px white;
+    z-index: 1000; 
+    overflow-y: auto;  
+    padding: 10px; 
+}
+.resource-close-button {
+    cursor: pointer; 
+    float: right; 
+    font-size: 30px; 
+    color: #f7c82d; 
+    margin: 10px; 
+}
+.resource-close-button:hover {
+    color: red; 
+}
+#resource-product-dropdown-container {
+    height: 85%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+#resource-product-dropdown-mid {
+    position: relative;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    padding-left: 50px;
+    justify-content: space-between;
+    overflow: hidden;
+    height: 100%; 
+}
+#resource-product-dropdown-mid-top {
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding-left: 20px;
+    width: 100%;
+}
+.resource-hoverable a{
+    cursor: pointer;
+    color: white;
+    font-size: larger;
+    padding-left: 40px;
+    text-decoration: none;
+    margin: 10px 0;
+    transition: all 0.2s;
+}
+.resource-hoverable a:hover {
+    color: #f7c82d;
+}
+#resource-product-dropdown-mid-bottom {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#resource-product-dropdown-mid-bottom-container {
+    height: 50%;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+#resource-product-dropdown-mid-bottom-container h6 {
+    color: white;
+    padding-left: 10px;
+    font-size: 0.8rem;
+}
+#resource-product-dropdown-mid-bottom-container #dot{
+    position: relative;
+    top: 02px;
+}
+#resource-product-dropdown-mid-bottom-container-icon {
+    height: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+}
+.resource-linkedin-icon {
+    text-decoration: none;
+}
+.resource-linkedin-icon img {
+    margin-left: 20px;
+    border-radius: 5px;
+    background-image: linear-gradient(to right,#f7c82d,#f7c82d); 
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px; 
+    height: 30px;
+    padding: 5px;
+    transition: all 1s;
+}
+.resource-linkedin-icon img:hover {
+    background-color: white;
+    background-image: none;
+}
+#resource-product-dropdown-right {
+    height: 100%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#resource-product-dropdown-right-container {
+    height: 80%;
+    width: 80%;
+}
+#resource-product-dropdown-mid-bottom-container-follow-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+#resource-product-image {
+    height: 100%;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+    border: 5px solid #f7c82d;
+    background-color: white;
+    background-size: 100%; 
+    background-repeat: no-repeat; 
+    background-position: center; 
+    background-clip: border-box;
+}
+@media (max-width: 768px) {
+    .resource-hoverable {
+        font-size: small;
+        padding-left: 0px;
+        text-align: left;
+        width: 100vw;
+    }
+    #resource-product-dropdown-right-container {
+        height: 60%;
+        width: 80%;
+    }
+    .resource-linkedin-icon img {
+        width: 30px; 
+        height: 30px; 
+    }
+ 
+}
+@media (max-width: 600px) {
+    .resource-dropdown-content {
+        height: 400px;
+    }
+    #resource-product-dropdown-container {
+        height: fit-content;
+        padding-bottom: 60px;
+    }
+    #resource-product-dropdown-mid {
+        width: 100%;
+    }
+    #resource-product-dropdown-mid-top {
+        height: 50%;
+        padding-left: 0px;
+    }
+    .resource-hoverable {
+        font-size: small;
+        padding-left: 20px;
+    }
+    #resource-product-dropdown-mid-bottom-container {
+        height: fit-content;
+        width: 90%;
+    }
+    #resource-product-dropdown-mid-bottom-container h6 {
+        font-size: 0.7rem;
+    }
+    #resource-product-dropdown-mid-bottom-container-icon {
+        height: 100%;
+        flex-direction:row;
+        justify-content: left;
+        position: relative;
+        left: 20px;
+    }
+    .resource-linkedin-icon img {
+        margin-left: 5px;
+        width: 30px; 
+        height: 30px; 
+    }
+    #resource-product-dropdown-right {
+        display: none;
+    }
+    #resource-product-dropdown-right-container {
+        height: 60%;
+        width: 100%;
+    }
+} 
+/* RESOURCE DROPDOWN CONTENT END */
 
 
 
