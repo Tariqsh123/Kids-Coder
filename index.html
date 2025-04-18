@@ -35,297 +35,219 @@
 </head>
 
 <body>
-<!-- Navbar -->
-
-<div id="Pro-Base">
+  <!-- Navbar -->
+   
+  <div id="Pro-Base">
     <div id="base">
       <p>Powered By</p>
       <a href="https://thebravenext.com/"><img src="	https://www.thebravenext.com/Images/the-brave-next-main-logo.png" alt=""></a>
     </div>
   </div>
 
-
   <nav class="navbar navbar-expand-lg bg-light" >
     <div class="container-fluid">
-        <a class="navbar-brand" href="index.html" title="">
-            <img src="./images/Logo.png" title="" alt=""id="logo">
-          </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">MENU</button>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav">        
-           <!-- RESOURCE                  -->
-           <li class="nav-item" id="hide-nav-item">
+      <a class="navbar-brand" href="index.html" title="">
+        <img src="./images/Logo.png" title="" alt=""id="logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">MENU</button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav">        
+          <!-- RESOURCE-->
+          <li class="nav-item" id="hide-nav-item">
             <a class="nav-link" id="resource-first-nav-item" class="drop-item" onclick="resourceToggleDropdown()">Courses<span id="dot"></span></a>
-                <div class="resource-dropdown-content" id="resource-dropdown-menu">
-                    <span class="resource-close-button" onclick="resourceCloseDropdown()">x</span> 
-                        <div id="resource-product-dropdown-container">
-                            <div id="resource-product-dropdown-mid">
-                                <div id="resource-product-dropdown-mid-top">
-                                    <h6 class="resource-hoverable" id="resource-product-dropdown-content1"><a href="#">Data Analytics</a></h6>
-                                    <h6 class="resource-hoverable" id="resource-product-dropdown-content2"><a href="#">Digital Marketing</a></h6>
-                                    <h6 class="resource-hoverable" id="resource-product-dropdown-content3"><a href="#">Web Development</a></h6>
-                                    <h6 class="resource-hoverable" id="resource-product-dropdown-content5"><a href="#">App Development</a></h6>
-                                    <h6 class="resource-hoverable" id="resource-product-dropdown-content4"><a href="#">View All</a></h6>
-                                </div>
-                                <div id="resource-product-dropdown-mid-bottom">
-                                    <div id="resource-product-dropdown-mid-bottom-container">
-                                        <div id="resource-product-dropdown-mid-bottom-container-follow-container">
-                                            <span id="dot"></span> <h6 >Follow Us</h6>
-                                        </div>
-                                        <div id="resource-product-dropdown-mid-bottom-container-icon">
-                                            <a href="#" class="resource-linkedin-icon">
-                                                <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/facebook-f.png" title="Facebook icon" alt="Facebook icon"/>
-                                            </a>
-                                            <a href="#" class="resource-linkedin-icon">
-                                                <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/twitterx--v2.png" title="Twitter icon" alt="Twitter icon"/>
-                                            </a>
-                                            <a href="#" class="resource-linkedin-icon">
-                                                <img width="50" height="50"  src="https://img.icons8.com/ios-filled/50/instagram-new--v1.png"  title="Instagram icon" alt="Instagram icon"/>
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div id="resource-product-dropdown-right">
-                                <div id="resource-product-dropdown-right-container">
-                                    <div id="resource-product-image"></div>
-                                </div>
-                            </div>
-                        </div>
-                </div>
-        </li>
-        <!-- RESOURCE END-->
-
-        <script>
-            // RESOURCE
-function resourceToggleDropdown() {
-    var resourceDropdownMenu = document.getElementById('resource-dropdown-menu');
-    if (resourceDropdownMenu.style.display === 'block') {
-        resourceCloseDropdown();
-    } else {
-        resourceDropdownMenu.style.display = 'block'; 
-    }
-}
-function resourceCloseDropdown() {
-    var resourceDropdownMenu = document.getElementById('resource-dropdown-menu');
-    resourceDropdownMenu.style.display = 'none'; 
-}
-document.addEventListener('click', function(event) {
-    var resourceDropdownMenu = document.getElementById('resource-dropdown-menu');
-    var resourceDropdownToggle = document.getElementById('resource-nav-item');
-    if (resourceDropdownMenu && resourceDropdownToggle && 
-        !resourceDropdownMenu.contains(event.target) && 
-        !resourceDropdownToggle.contains(event.target)) {
-        resourceCloseDropdown(); 
-    }
-});
-document.addEventListener('keydown', function(event) {
-    if (event.key === "Escape") {
-        resourceCloseDropdown();
-    }
-});
-// RESOURCE IMAGE
-const resourceImages = {
-    "resource-product-dropdown-content1": "https://d1ng1bucl7w66k.cloudfront.net/ghost-blog/2023/06/Screen-Shot-2023-06-20-at-5.21.51-PM.png",
-    "resource-product-dropdown-content2": "https://www.kiddy123.com/custom/domain_1/image_files/sitemgr_photo_55002.jpg",
-    "resource-product-dropdown-content3": "https://d1ng1bucl7w66k.cloudfront.net/ghost-blog/2021/10/Screen-Shot-2021-10-26-at-4.12.49-PM.png",
-    "resource-product-dropdown-content4": "https://ociso.ucla.edu/sites/default/files/styles/sf_landscape_16x9/public/media/images/january-security-privacy-online_v3_0.png?h=b508fa70&itok=L1hIhBmL",
-    "resource-product-dropdown-content5": "https://miro.medium.com/v2/resize:fit:500/1*x2YA9tPfUSD1DtKGq7q6_g.png"
-};
-const resourceProductImage = document.getElementById('resource-product-image');
-if (resourceProductImage) {
-    resourceProductImage.style.backgroundImage = `url(${resourceImages["resource-product-dropdown-content1"]})`;
-}
-const resourceHoverableElements = document.querySelectorAll('.resource-hoverable');
-resourceHoverableElements.forEach(element => {
-    element.addEventListener('mouseover', function() {
-        const resourceImageId = this.id; 
-        const resourceImagePath = resourceImages[resourceImageId]; 
-        if (resourceImagePath) {
-            resourceProductImage.style.backgroundImage = `url(${resourceImagePath})`; 
-        }
-    });
-});
-document.addEventListener('click', function(event) {
-    var resourceDropdownMenu = document.getElementById('resource-dropdown-menu');
-    var resourceLink = document.getElementById('resource-first-nav-item');
-    if (!resourceDropdownMenu.contains(event.target) && !resourceLink.contains(event.target)) {
-        resourceDropdownMenu.style.display = 'none';
-    }
-});
-// RESOURCE DROP DOWN END
-        </script>
-                <li class="nav-item">
-                    <a class="nav-link" id="industry-first-nav-item" href="#" title="">Programs<span id="dot"></span></a>
-                </li>
-                
-                <li class="nav-item">
-                    <a class="nav-link" id="technology-first-nav-item"  href="#" title="">Camps <span id="dot"></span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="company-first-nav-item" href="#" title="" >Blog <span id="dot"></span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" id="technology-first-nav-item"  href="#" title="">About Us<span id="dot"></span></a>
-                </li>
-              
-                <li  id="last-nav-item">
-                    <a class="nav-link" href="Schedule-Demo.html" id="last-nav-link" title=" Page">Schedule Demo <span id="last-dot"></span></a>
-                </li>
-            </ul>
-       </div>
-    </div>
-</nav>
-
-<script>
-    // MENU
-document.addEventListener('DOMContentLoaded', function () {
-    var toggler = document.querySelector('.navbar-toggler');
-    
-    toggler.addEventListener('click', function () {
-        if (this.textContent.trim() === 'MENU') {
-            this.textContent = 'CLOSE';
-        } else {
-            this.textContent = 'MENU';
-        }
-    });
-});
-// MENU END
-</script>
-<!-- Navbar END -->
-
-
-   <!-- <section class="hero-section">
- <div class="container full-width">
-    <div class="table-content">
-       <div class="col-md-6 pad-l-0 labtop-bg"></div>
-       <div class="col-md-6 hero-text">
-          <div class="banner-text">
-             <h1 class="white-t text-center mt-2 mb-2 text-uppercase b-f">RELIABLE &amp; SECURED
-                        ICO SCRIPT</h1>
-             <p>Select The Type of Token Network for your ICO Platform</p>
-          </div>
-          <div class="text-center">
-             <form  id="mainForm" name="mainForm">
-                <div class="select-box">
-                   <div class="box">
-                      <div class="gallery-card selected">
-                         <div class="gallery-card-body">
-                            <label class="block-check">
-                               <div class="pic-s"><img alt="" title="" src="./images/img-ethereum-icon.png">
-                               <p>Ethereum token</p>
-                               </div>
-                               <input type="radio" checked name="select-radio" value="PRE ICO"> <span class="checkmark"></span> 
-                            </label>
-                         </div>
+            <div class="resource-dropdown-content" id="resource-dropdown-menu">
+              <span class="resource-close-button" onclick="resourceCloseDropdown()">x</span> 
+              <div id="resource-product-dropdown-container">
+                <div id="resource-product-dropdown-mid">
+                  <div id="resource-product-dropdown-mid-top">
+                    <h6 class="resource-hoverable" id="resource-product-dropdown-content1"><a href="Data-Analytics-Course-Page.html">Data Analytics</a></h6>
+                    <h6 class="resource-hoverable" id="resource-product-dropdown-content2"><a href="#">Digital Marketing</a></h6>
+                    <h6 class="resource-hoverable" id="resource-product-dropdown-content3"><a href="#">Web Development</a></h6>
+                    <h6 class="resource-hoverable" id="resource-product-dropdown-content5"><a href="#">App Development</a></h6>
+                    <h6 class="resource-hoverable" id="resource-product-dropdown-content4"><a href="#">Cyber Security</a></h6>
+                  </div>
+                  <div id="resource-product-dropdown-mid-bottom">
+                    <div id="resource-product-dropdown-mid-bottom-container">
+                      <div id="resource-product-dropdown-mid-bottom-container-follow-container">
+                        <span id="dot"></span> <h6 >Follow Us</h6>
                       </div>
-                   </div>
-                   <div class="box">
-                      <div class="gallery-card">
-                         <div class="gallery-card-body">
-                            <label class="block-check">
-                               <div class="pic-s"><img alt="" title="" src="./images/img-tron-icon.png">
-                               <p>Tron token</p></div>
-                               <input type="radio" name="select-radio" value="Ether Based"> <span class="checkmark"></span> 
-                            </label>
-                         </div>
+                      <div id="resource-product-dropdown-mid-bottom-container-icon">
+                        <a href="#" class="resource-linkedin-icon">
+                          <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/facebook-f.png" title="Facebook icon" alt="Facebook icon"/>
+                        </a>
+                        <a href="#" class="resource-linkedin-icon">
+                          <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/twitterx--v2.png" title="Twitter icon" alt="Twitter icon"/>
+                        </a>
+                        <a href="#" class="resource-linkedin-icon">
+                          <img width="50" height="50"  src="https://img.icons8.com/ios-filled/50/instagram-new--v1.png"  title="Instagram icon" alt="Instagram icon"/>
+                        </a>
                       </div>
-                   </div>
-                   <div class="box">
-                      <div class="gallery-card">
-                         <div class="gallery-card-body">
-                            <label class="block-check">
-                               <div class="pic-s"><img alt="" title="" src="./images/img-bsc-icon.png">
-                               <p>Bnb token</p></div>
-                               <input type="radio" name="select-radio" value="Altcoin Based"> <span class="checkmark"></span> 
-                            </label>
-                         </div>
-                      </div>
-                   </div>
-                </div>
-                   <div class="whatsapp-form quick">
-                     <a href="#"  class="btn site-btn orange-btn">Live Demo</a>
                     </div>
-             </form>
-          </div>
-       </div>
-    </div>
- </div>
-</section> -->
-
-<!-- HEro Section -->
- <div id="Hero-section-main-container">
-    <div id="hero-section-second-main-container">
-        <div id="hero-section-left">
-            <h6>Coding for Kids Online</h6>
-            <h1>Future <span> innovators </span> are born here</h1>
-            <h5>Join our community of over 100,000 students</h5>
-            <div id="header-left-button-container">
-                <div id="header-left-button-inner">
-                    <button><span>Self-Paced-Courses</span></button>
-                    <p>Start Free 14-Day Trial</p>
+                  </div>
                 </div>
-                <div id="header-left-button-inner">
-                <button><span>1-on-1 Lessons</span> </button>
-                <p>Get Your First Class Free</p>
+                <div id="resource-product-dropdown-right">
+                  <div id="resource-product-dropdown-right-container">
+                    <div id="resource-product-image"></div>
+                  </div>
                 </div>
+              </div>
             </div>
-            <div id="header-left-bottom-section">
-                <img src="https://codakid.com/wp-content/uploads/2022/09/Google.png" alt="">
-                <img src="https://raw.githubusercontent.com/Tariqsh123/Kids-Coder/refs/heads/main/images/Header-left-bottom-5-stars.png" alt="">
-                <p>4.9 out of 5 based on hundreds of reviews</p>
-            </div>
-        </div>
-        <div id="hero-section-right">
-            <img src="https://raw.githubusercontent.com/Tariqsh123/Kids-Coder/refs/heads/main/images/Header-right-bg.png" alt="">
-            <img id="second-img" src="" alt="">
-        </div>
-        
-        <script>
-          document.addEventListener("DOMContentLoaded", function () {
-              const baseImages = [
-                  "./images/Header-Right-Float-img1.png",
-                  "./images/Header-Right-Float-img2.png",
-                  "./images/Header-Right-Float-img3.png",
-                  "./images/Header-Right-Float-img4.png"
-              ];
-              
-              const images = Array(10).fill(baseImages).flat();
-              let headercurrentIndex = 0;
-              const secondImg = document.getElementById('second-img');
-              secondImg.src = images[headercurrentIndex];
-      
-              function changeImage() {
-                  headercurrentIndex = (headercurrentIndex + 1) % images.length;
-                  secondImg.src = images[headercurrentIndex];
+          </li>
+          <!-- RESOURCE END-->
+          <script>
+            function resourceToggleDropdown() {
+              var resourceDropdownMenu = document.getElementById('resource-dropdown-menu');
+              if (resourceDropdownMenu.style.display === 'block') {
+                resourceCloseDropdown();
               }
-      
-              setInterval(changeImage, 10000);
-          });
-      </script>
-      
-        
-        
-        
+              else {
+                resourceDropdownMenu.style.display = 'block'; 
+              }
+            }
+            function resourceCloseDropdown() {
+              var resourceDropdownMenu = document.getElementById('resource-dropdown-menu');
+              resourceDropdownMenu.style.display = 'none'; 
+            }
+            document.addEventListener('click', function(event) {
+              var resourceDropdownMenu = document.getElementById('resource-dropdown-menu');
+              var resourceDropdownToggle = document.getElementById('resource-nav-item');
+              if (resourceDropdownMenu && resourceDropdownToggle && 
+              !resourceDropdownMenu.contains(event.target) && 
+              !resourceDropdownToggle.contains(event.target)) {
+                resourceCloseDropdown(); 
+              }
+            });
+            document.addEventListener('keydown', function(event) {
+              if (event.key === "Escape") {
+                resourceCloseDropdown();
+              }
+            });
+            // RESOURCE IMAGE
+            const resourceImages = {
+              "resource-product-dropdown-content1": "https://d1ng1bucl7w66k.cloudfront.net/ghost-blog/2023/06/Screen-Shot-2023-06-20-at-5.21.51-PM.png",
+              "resource-product-dropdown-content2": "https://www.kiddy123.com/custom/domain_1/image_files/sitemgr_photo_55002.jpg",
+              "resource-product-dropdown-content3": "https://d1ng1bucl7w66k.cloudfront.net/ghost-blog/2021/10/Screen-Shot-2021-10-26-at-4.12.49-PM.png",
+              "resource-product-dropdown-content4": "https://ociso.ucla.edu/sites/default/files/styles/sf_landscape_16x9/public/media/images/january-security-privacy-online_v3_0.png?h=b508fa70&itok=L1hIhBmL",
+              "resource-product-dropdown-content5": "https://miro.medium.com/v2/resize:fit:500/1*x2YA9tPfUSD1DtKGq7q6_g.png"
+            };
+            const resourceProductImage = document.getElementById('resource-product-image');
+            if (resourceProductImage) {
+              resourceProductImage.style.backgroundImage = `url(${resourceImages["resource-product-dropdown-content1"]})`;
+            }
+            const resourceHoverableElements = document.querySelectorAll('.resource-hoverable');
+            resourceHoverableElements.forEach(element => {
+              element.addEventListener('mouseover', function() {
+                const resourceImageId = this.id; 
+                const resourceImagePath = resourceImages[resourceImageId]; 
+                if (resourceImagePath) {
+                  resourceProductImage.style.backgroundImage = `url(${resourceImagePath})`; 
+                }
+              });
+            });
+            document.addEventListener('click', function(event) {
+              var resourceDropdownMenu = document.getElementById('resource-dropdown-menu');
+              var resourceLink = document.getElementById('resource-first-nav-item');
+              if (!resourceDropdownMenu.contains(event.target) && !resourceLink.contains(event.target)) {
+                resourceDropdownMenu.style.display = 'none';
+              }
+            });
+          </script>
+          <li class="nav-item">
+            <a class="nav-link" id="industry-first-nav-item" href="#" title="">Programs<span id="dot"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="technology-first-nav-item"  href="#" title="">Camps <span id="dot"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="company-first-nav-item" href="#" title="" >Blog <span id="dot"></span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="technology-first-nav-item"  href="#" title="">About Us<span id="dot"></span></a>
+          </li>
+          <li  id="last-nav-item">
+            <a class="nav-link" href="Schedule-Demo.html" id="last-nav-link" title=" Page">Schedule Demo <span id="last-dot"></span></a>
+          </li>
+        </ul>
+      </div>
     </div>
- </div>
-<!-- HEro Section End -->
+  </nav>
+  <script>
+    // MENU
+    document.addEventListener('DOMContentLoaded', function () {
+      var toggler = document.querySelector('.navbar-toggler');
+      toggler.addEventListener('click', function () {
+        if (this.textContent.trim() === 'MENU') {
+          this.textContent = 'CLOSE';
+        }
+        else{
+          this.textContent = 'MENU';
+        }
+      });
+    });
+  </script>
+  <!-- Navbar END -->
 
-
- <!-- After Header-Section -->
+  <!-- HEro Section -->
+  <div id="Hero-section-main-container">
+    <div id="hero-section-second-main-container">
+      <div id="hero-section-left">
+        <h6>Coding for Kids Online</h6>
+        <h1>Future <span> innovators </span> are born here</h1>
+        <h5>Join our community of over 100,000 students</h5>
+        <div id="header-left-button-container">
+          <div id="header-left-button-inner">
+            <button><span>Self-Paced-Courses</span></button>
+            <p>Start Free 14-Day Trial</p>
+          </div>
+          <div id="header-left-button-inner">
+            <button><span>1-on-1 Lessons</span> </button>
+            <p>Get Your First Class Free</p>
+          </div>
+        </div>
+        <div id="header-left-bottom-section">
+          <img src="https://codakid.com/wp-content/uploads/2022/09/Google.png" alt="">
+          <img src="https://raw.githubusercontent.com/Tariqsh123/Kids-Coder/refs/heads/main/images/Header-left-bottom-5-stars.png" alt="">
+          <p>4.9 out of 5 based on hundreds of reviews</p>
+        </div>
+      </div>
+      <div id="hero-section-right">
+        <img src="https://raw.githubusercontent.com/Tariqsh123/Kids-Coder/refs/heads/main/images/Header-right-bg.png" alt="">
+        <img id="second-img" src="" alt="">
+      </div>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          const baseImages = [
+          "./images/Header-Right-Float-img1.png",
+          "./images/Header-Right-Float-img2.png",
+          "./images/Header-Right-Float-img3.png",
+          "./images/Header-Right-Float-img4.png"
+          ];
+          const images = Array(10).fill(baseImages).flat();
+          let headercurrentIndex = 0;
+          const secondImg = document.getElementById('second-img');
+          secondImg.src = images[headercurrentIndex];
+          function changeImage() {
+            headercurrentIndex = (headercurrentIndex + 1) % images.length;
+            secondImg.src = images[headercurrentIndex];
+          }
+          setInterval(changeImage, 10000);
+        });
+      </script>
+    </div>
+  </div>
+  <!-- HEro Section End -->
+   
+  <!-- After Header-Section -->
   <div id="after-header-heading-section">
     <h2>Explore Our Services</h2>
   </div>
- <div id="after-header-main">
+  <div id="after-header-main">
     <div class="After-header-carousel-wrapper">
-       <!-- Buttons directly in HTML -->
-    <button class="carousel-btn prev-btn">&lt;</button>
-    <button class="carousel-btn next-btn">&gt;</button>
-    
+      <button class="carousel-btn prev-btn">&lt;</button>
+      <button class="carousel-btn next-btn">&gt;</button>
       <div class="After-header-carousel-track" id="carousel-track">
-        
-        <!-- 8 Cards -->
-         <!-- 1 -->
+      <!-- 8 Cards -->
+      <!-- 1 -->
         <div class="After-header-card" >
           <div class="After-header-card-inner">
             <div id="img-container">
@@ -409,276 +331,272 @@ document.addEventListener('DOMContentLoaded', function () {
       </div>
     </div>
   </div>
-<script>
-  const track = document.querySelector('.After-header-carousel-track');
-const cards = document.querySelectorAll('.After-header-card');
-const wrapper = document.querySelector('.After-header-carousel-wrapper');
-let index = 0;
-let interval;
-let cardsPerView = 4;
-function getCardsPerView() {
-  if (window.innerWidth <= 480) return 1;
-  if (window.innerWidth <= 768) return 2;
-  if (window.innerWidth <= 992) return 3;
-  return 4;
-}
-function cloneCards() {
-  cardsPerView = getCardsPerView();
-  const totalClones = cardsPerView;
-  const allCards = document.querySelectorAll('.After-header-card');
-  allCards.forEach(card => {
-    if (card.classList.contains('clone')) card.remove();
-  });
-  for (let i = cards.length - totalClones; i < cards.length; i++) {
-    const clone = cards[i].cloneNode(true);
-    clone.classList.add('clone');
-    track.prepend(clone);
-  }
-  for (let i = 0; i < totalClones; i++) {
-    const clone = cards[i].cloneNode(true);
-    clone.classList.add('clone');
-    track.appendChild(clone);
-  }
-  index = cardsPerView;
-  updateTransform(false);
-}
-function updateTransform(withTransition = true) {
-  const cardWidth = wrapper.clientWidth / cardsPerView;
-  if (!withTransition) {
-    track.style.transition = 'none';
-  } else {
-    track.style.transition = 'transform 0.4s ease';
-  }
-  track.style.transform = `translateX(-${cardWidth * index}px)`;
-}
-function nextSlide() {
-  index++;
-  updateTransform();
-  const totalCards = document.querySelectorAll('.After-header-card').length;
-  if (index === totalCards - cardsPerView) {
-    setTimeout(() => {
-      track.style.transition = 'none';
+  <script>
+    const track = document.querySelector('.After-header-carousel-track');
+    const cards = document.querySelectorAll('.After-header-card');
+    const wrapper = document.querySelector('.After-header-carousel-wrapper');
+    let index = 0;
+    let interval;
+    let cardsPerView = 4;
+    function getCardsPerView() {
+      if (window.innerWidth <= 480) return 1;
+      if (window.innerWidth <= 768) return 2;
+      if (window.innerWidth <= 992) return 3;
+      return 4;
+    }
+    function cloneCards() {
+      cardsPerView = getCardsPerView();
+      const totalClones = cardsPerView;
+      const allCards = document.querySelectorAll('.After-header-card');
+      allCards.forEach(card => {
+        if (card.classList.contains('clone')) card.remove();
+      });
+      for (let i = cards.length - totalClones; i < cards.length; i++) {
+        const clone = cards[i].cloneNode(true);
+        clone.classList.add('clone');
+        track.prepend(clone);
+      }
+      for (let i = 0; i < totalClones; i++) {
+        const clone = cards[i].cloneNode(true);
+        clone.classList.add('clone');
+        track.appendChild(clone);
+      }
       index = cardsPerView;
       updateTransform(false);
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          track.style.transition = 'transform 0.4s ease';
-        });
-      });
-    }, 400);
-  }
-}
-function prevSlide() {
-  index--;
-  updateTransform();
-  if (index === 0) {
-    setTimeout(() => {
-      track.style.transition = 'none';
+    }
+    function updateTransform(withTransition = true) {
+      const cardWidth = wrapper.clientWidth / cardsPerView;
+      if (!withTransition) {
+        track.style.transition = 'none';
+      } 
+      else {
+        track.style.transition = 'transform 0.4s ease';
+      }
+      track.style.transform = `translateX(-${cardWidth * index}px)`;
+    }
+    function nextSlide() {
+      index++;
+      updateTransform();
       const totalCards = document.querySelectorAll('.After-header-card').length;
-      index = totalCards - (cardsPerView * 2);
-      updateTransform(false);
-      requestAnimationFrame(() => {
-        requestAnimationFrame(() => {
-          track.style.transition = 'transform 0.4s ease';
-        });
-      });
-    }, 400);
-  }
-}
-function startAutoSlide() {
-  interval = setInterval(nextSlide, 3000);
-}
-function stopAutoSlide() {
-  clearInterval(interval);
-}
-document.querySelector('.prev-btn').addEventListener('click', () => {
-  stopAutoSlide();
-  prevSlide();
-  startAutoSlide();
-});
-document.querySelector('.next-btn').addEventListener('click', () => {
-  stopAutoSlide();
-  nextSlide();
-  startAutoSlide();
-});
-window.addEventListener('resize', () => {
-  cardsPerView = getCardsPerView();
-  cloneCards();
-});
-
-cloneCards();
-startAutoSlide();
-</script>
- <!-- After Header-Section End -->
-
-
-<!-- Benifits -->
-<div id="benifits-main-heading-container">
-  <h2>Key Advantages of <span>Coding</span> for Young Minds</h2>
-</div>
-<div id="benifits-main-container">
-  <div id="benifits-second-container">
-    <div id="benifits-left-image-container">
-      <img src="./images/benifit-left-image.png" alt="">
-      <img src="./images/benifit-left-float-1.png" id="benifit-float-image-1" class="benifit-float-image" alt="">
-      <img src="./images/benifit-left-float-2.png" id="benifit-float-image-2" class="benifit-float-image" alt="">
-      <img src="./images/benifit-left-float-3.png" id="benifit-float-image-3" class="benifit-float-image" alt="">
-    </div>
-    <div id="benifits-right-text-container">
-      <div class="benefit-box">
-        <img src="https://img.icons8.com/?size=100&id=z3YMXqHDYl9X&format=png&color=000000" alt="">
-        <h6>Boost Logical Thinking and Problem Solving</h6>
-      </div>
-      <div class="benefit-box">
-        <img src="https://img.icons8.com/?size=100&id=1sQq7V9UKSUx&format=png&color=000000" alt="">
-        <h6>Improve Academic Performance</h6>
-      </div>
-      <div class="benefit-box">
-        <img src="https://img.icons8.com/?size=100&id=58668&format=png&color=000000" alt="">
-        <h6>Make Kids Future Ready</h6>
-      </div>
-      <div class="benefit-box">
-        <img src="https://img.icons8.com/?size=100&id=VlkEY7xMr9cb&format=png&color=000000" alt="">
-        <h6>Enhance Coding Quotient</h6>
-      </div>
-      <div class="benefit-box">
-        <img src="https://img.icons8.com/?size=100&id=X0lsQdZODVWW&format=png&color=000000" alt="">
-        <h6>Develope Creativity & Imagination</h6>
-      </div>
-      <div class="benefit-box">
-        <img src="https://img.icons8.com/?size=100&id=74710&format=png&color=000000" alt="">
-        <h6>Build Calloboration Skills</h6>
-      </div>
-    </div>
-    
+      if (index === totalCards - cardsPerView) {
+        setTimeout(() => {
+          track.style.transition = 'none';
+          index = cardsPerView;
+          updateTransform(false);
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+              track.style.transition = 'transform 0.4s ease';
+            });
+          });
+        }, 400);
+      }
+    }
+    function prevSlide() {
+      index--;
+      updateTransform();
+      if (index === 0) {
+        setTimeout(() => {
+          track.style.transition = 'none';
+          const totalCards = document.querySelectorAll('.After-header-card').length;
+          index = totalCards - (cardsPerView * 2);
+          updateTransform(false);
+          requestAnimationFrame(() => {
+            requestAnimationFrame(() => {
+              track.style.transition = 'transform 0.4s ease';
+            });
+          });
+        }, 400);
+      }
+    }
+    function startAutoSlide() {
+      interval = setInterval(nextSlide, 3000);
+    }
+    function stopAutoSlide() {
+      clearInterval(interval);
+    }
+    document.querySelector('.prev-btn').addEventListener('click', () => {
+      stopAutoSlide();
+      prevSlide();
+      startAutoSlide();
+    });
+    document.querySelector('.next-btn').addEventListener('click', () => {
+      stopAutoSlide();
+      nextSlide();
+      startAutoSlide();
+    });
+    window.addEventListener('resize', () => {
+      cardsPerView = getCardsPerView();
+      cloneCards();
+    });
+    cloneCards();
+    startAutoSlide();
+  </script>
+  <!-- After Header-Section End -->
+   
+  <!-- Benifits -->
+  <div id="benifits-main-heading-container">
+    <h2>Key Advantages of <span>Coding</span> for Young Minds</h2>
   </div>
-</div>
-<!-- Benifits End -->
-
-
-
- <!-- Mentor Ship Programs -->
- <div id="mentorship-program-header-section">
-  <h2>Mentorship Programs</h2>
-  <select id="mentorship-select">
+  <div id="benifits-main-container">
+    <div id="benifits-second-container">
+      <div id="benifits-left-image-container">
+        <img src="./images/benifit-left-image.png" alt="">
+        <img src="./images/benifit-left-float-1.png" id="benifit-float-image-1" class="benifit-float-image" alt="">
+        <img src="./images/benifit-left-float-2.png" id="benifit-float-image-2" class="benifit-float-image" alt="">
+        <img src="./images/benifit-left-float-3.png" id="benifit-float-image-3" class="benifit-float-image" alt="">
+      </div>
+      <div id="benifits-right-text-container">
+        <div class="benefit-box">
+          <img src="https://img.icons8.com/?size=100&id=z3YMXqHDYl9X&format=png&color=000000" alt="">
+          <h6>Boost Logical Thinking and Problem Solving</h6>
+        </div>
+        <div class="benefit-box">
+          <img src="https://img.icons8.com/?size=100&id=1sQq7V9UKSUx&format=png&color=000000" alt="">
+          <h6>Improve Academic Performance</h6>
+        </div>
+        <div class="benefit-box">
+          <img src="https://img.icons8.com/?size=100&id=58668&format=png&color=000000" alt="">
+          <h6>Make Kids Future Ready</h6>
+        </div>
+        <div class="benefit-box">
+          <img src="https://img.icons8.com/?size=100&id=VlkEY7xMr9cb&format=png&color=000000" alt="">
+          <h6>Enhance Coding Quotient</h6>
+        </div>
+        <div class="benefit-box">
+          <img src="https://img.icons8.com/?size=100&id=X0lsQdZODVWW&format=png&color=000000" alt="">
+          <h6>Develope Creativity & Imagination</h6>
+        </div>
+        <div class="benefit-box">
+          <img src="https://img.icons8.com/?size=100&id=74710&format=png&color=000000" alt="">
+          <h6>Build Calloboration Skills</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Benifits End -->
+   
+  <!-- Mentor Ship Programs -->
+  <div id="mentorship-program-header-section">
+    <h2>Mentorship Programs</h2>
+    <select id="mentorship-select">
       <option value="Data Analytics">Data Analytics</option>
       <option value="Web Development">Web Development</option>
       <option value="Digital Marketing">Digital Marketing</option>
       <option value="Cyber Security">Cyber Security</option>
       <option value="App Development">App Development</option>
-  </select>
-</div>
-<!-- Work -->
-<div id="mentorship-program-work-section">
-  <div id="mentorship-program-work-second">
-      <div id="mentorship-program-work-second-inner">
-          <div id="mentorship-program-img-container">
-              <img src="https://i.pinimg.com/originals/f6/17/f0/f617f080d4d78bdee1c6615397bebc6a.gif" alt="" id="mentorship-program-back-dashboard">
-              <img src="./images/mentor-ship-1.png" alt="" id="mentorship-program-front-image">
-          </div>
-          <div id="mentorship-program-work-container">
-              <h3 id="program-title">Data Analytics Mentorship Program</h3>
-              <p id="program-description">Join this 16 weeks, Job-ready Program to master Data Analytics from scratch with Top Data Analysts from Microsoft, KPMG, Amazon, and Rapido.</p>
-              <div id="mentorship-star-container">
-                  <p>5.0</p>
-                  <img src="./images/Header-left-bottom-5-stars.png" alt="">
-                  <p id="program-reviews">(1,032)</p> 
-              </div>
-              <div id="mentorship-target-section">
-                  <p>Targeted Job Role</p>
-                  <span>Data Analytics</span>
-              </div>
-              <div id="mentorship-duration-section">
-                  <div id="mentorship-duration-box">
-                      <div id="mentorship-duration-box-img-container">
-                          <img src="https://img.icons8.com/?size=100&id=GlEOr5x0aJpH&format=png&color=FFFFFF" alt="">
-                      </div>
-                      <div id="mentorship-duration-box-text-container">
-                          <p>Duration</p>
-                          <span>16 Weeks</span>
-                      </div>
-                  </div>
-                  <div id="mentorship-duration-box">
-                      <div id="mentorship-duration-box-img-container">
-                          <img src="https://img.icons8.com/?size=100&id=IGYpYRyLkRLI&format=png&color=FFFFFF" alt="">
-                      </div>
-                      <div id="mentorship-duration-box-text-container">
-                          <p>Live Sessions</p>
-                          <span>106</span>
-                      </div>
-                  </div>
-              </div>
-              <div id="mentorship-button-container">
-                  <button class="mentorship-button-first">Join Now</button>
-                  <button class="mentorship-button-second">Learn More</button>
-              </div>
-          </div>
-      </div>
+    </select>
   </div>
-</div>
 
-<script>
-  const mentorshipSelect = document.getElementById('mentorship-select');
-  const programTitle = document.getElementById('program-title');
-  const programDescription = document.getElementById('program-description');
-  const targetJobRole = document.getElementById('mentorship-target-section').querySelector('span');
-  const mentorshipDuration = document.querySelectorAll('#mentorship-duration-box span');
-  const mentorshipImages = document.querySelectorAll('#mentorship-program-img-container img');
-  const programReviews = document.getElementById('program-reviews');
-  const dashboardImage = document.getElementById('mentorship-program-back-dashboard');
-  const programsData = {
+  <!-- Work -->
+  <div id="mentorship-program-work-section">
+    <div id="mentorship-program-work-second">
+      <div id="mentorship-program-work-second-inner">
+        <div id="mentorship-program-img-container">
+          <img src="https://i.pinimg.com/originals/f6/17/f0/f617f080d4d78bdee1c6615397bebc6a.gif" alt="" id="mentorship-program-back-dashboard">
+          <img src="./images/mentor-ship-1.png" alt="" id="mentorship-program-front-image">
+        </div>
+        <div id="mentorship-program-work-container">
+          <h3 id="program-title">Data Analytics Mentorship Program</h3>
+          <p id="program-description">Join this 16 weeks, Job-ready Program to master Data Analytics from scratch with Top Data Analysts from Microsoft, KPMG, Amazon, and Rapido.</p>
+          <div id="mentorship-star-container">
+            <p>5.0</p>
+            <img src="./images/Header-left-bottom-5-stars.png" alt="">
+            <p id="program-reviews">(1,032)</p> 
+          </div>
+          <div id="mentorship-target-section">
+            <p>Targeted Job Role</p>
+            <span>Data Analytics</span>
+          </div>
+          <div id="mentorship-duration-section">
+            <div id="mentorship-duration-box">
+              <div id="mentorship-duration-box-img-container">
+                <img src="https://img.icons8.com/?size=100&id=GlEOr5x0aJpH&format=png&color=FFFFFF" alt="">
+              </div>
+              <div id="mentorship-duration-box-text-container">
+                <p>Duration</p>
+                <span>16 Weeks</span>
+              </div>
+            </div>
+            <div id="mentorship-duration-box">
+              <div id="mentorship-duration-box-img-container">
+                <img src="https://img.icons8.com/?size=100&id=IGYpYRyLkRLI&format=png&color=FFFFFF" alt="">
+              </div>
+              <div id="mentorship-duration-box-text-container">
+                <p>Live Sessions</p>
+                <span>106</span>
+              </div>
+            </div>
+          </div>
+          <div id="mentorship-button-container">
+            <button class="mentorship-button-first">Join Now</button>
+            <button class="mentorship-button-second">Learn More</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    const mentorshipSelect = document.getElementById('mentorship-select');
+    const programTitle = document.getElementById('program-title');
+    const programDescription = document.getElementById('program-description');
+    const targetJobRole = document.getElementById('mentorship-target-section').querySelector('span');
+    const mentorshipDuration = document.querySelectorAll('#mentorship-duration-box span');
+    const mentorshipImages = document.querySelectorAll('#mentorship-program-img-container img');
+    const programReviews = document.getElementById('program-reviews');
+    const dashboardImage = document.getElementById('mentorship-program-back-dashboard');
+    const programsData = {
       "Data Analytics": {
-          title: "Data Analytics Mentorship Program",
-          description: "Join this 16 weeks, Job-ready Program to master Data Analytics from scratch with Top Data Analysts from Microsoft, KPMG, Amazon, and Rapido.",
-          targetJob: "Data Analytics",
-          duration: ["16 Weeks", "106"],
-          image1: "https://i.pinimg.com/originals/f6/17/f0/f617f080d4d78bdee1c6615397bebc6a.gif",//Dashboard Image
-          image2: "./images/mentor-ship-1.png", //man image
-          reviews: "(1,032)",
-          dashboardImage: "https://i.pinimg.com/originals/f6/17/f0/f617f080d4d78bdee1c6615397bebc6a.gif" //Dashboard Image
+        title: "Data Analytics Mentorship Program",
+        description: "Join this 16 weeks, Job-ready Program to master Data Analytics from scratch with Top Data Analysts from Microsoft, KPMG, Amazon, and Rapido.",
+        targetJob: "Data Analytics",
+        duration: ["16 Weeks", "106"],
+        image1: "https://i.pinimg.com/originals/f6/17/f0/f617f080d4d78bdee1c6615397bebc6a.gif",//Dashboard Image
+        image2: "./images/mentor-ship-1.png", //man image
+        reviews: "(1,032)",
+        dashboardImage: "https://i.pinimg.com/originals/f6/17/f0/f617f080d4d78bdee1c6615397bebc6a.gif" //Dashboard Image
       },
       "Web Development": {
-          title: "Web Development Mentorship Program",
-          description: "Become a full-stack developer in just 12 weeks with hands-on projects and expert mentorship.",
-          targetJob: "Web Developer",
-          duration: ["12 Weeks", "80"],
-          image1: "https://www.ui-themes.com/content/images/2021/11/flask-black-dashboard-intro.gif",//Dashboard Image
-          image2: "./images/mentor-ship-2.png", //man image
-          reviews: "(200)",
-          dashboardImage: "https://www.ui-themes.com/content/images/2021/11/flask-black-dashboard-intro.gif"//Dashboard Image
+        title: "Web Development Mentorship Program",
+        description: "Become a full-stack developer in just 12 weeks with hands-on projects and expert mentorship.",
+        targetJob: "Web Developer",
+        duration: ["12 Weeks", "80"],
+        image1: "https://www.ui-themes.com/content/images/2021/11/flask-black-dashboard-intro.gif",//Dashboard Image
+        image2: "./images/mentor-ship-2.png", //man image
+        reviews: "(200)",
+        dashboardImage: "https://www.ui-themes.com/content/images/2021/11/flask-black-dashboard-intro.gif"//Dashboard Image
       },
       "Digital Marketing": {
-          title: "Digital Marketing Mentorship Program",
-          description: "Learn SEO, Social Media, and more in this 10-week Digital Marketing program, with mentorship from experts in the field.",
-          targetJob: "Digital Marketer",
-          duration: ["10 Weeks", "50"],
-          image1: "https://raw.githubusercontent.com/admin-dashboards/static/master/bootstrap-dashboard-material-intro.gif", //Dashboard Image
-          image2: "./images/mentor-ship-3.png", //man image
-          reviews: "(150)",
-          dashboardImage: "https://raw.githubusercontent.com/admin-dashboards/static/master/bootstrap-dashboard-material-intro.gif" //Dashboard Image
+        title: "Digital Marketing Mentorship Program",
+        description: "Learn SEO, Social Media, and more in this 10-week Digital Marketing program, with mentorship from experts in the field.",
+        targetJob: "Digital Marketer",
+        duration: ["10 Weeks", "50"],
+        image1: "https://raw.githubusercontent.com/admin-dashboards/static/master/bootstrap-dashboard-material-intro.gif", //Dashboard Image
+        image2: "./images/mentor-ship-3.png", //man image
+        reviews: "(150)",
+        dashboardImage: "https://raw.githubusercontent.com/admin-dashboards/static/master/bootstrap-dashboard-material-intro.gif" //Dashboard Image
       },
       "Cyber Security": {
-          title: "Cyber Security Mentorship Program",
-          description: "Learn how to protect systems and data from cyber attacks in this 14-week immersive mentorship program.",
-          targetJob: "Cyber Security Expert",
-          duration: ["14 Weeks", "90"],
-          image1: "https://raw.githubusercontent.com/admin-dashboards/static/master/bootstrap-dashboard-argon-intro.gif", //Dashboard Image 
-          image2: "./images/mentor-ship-4.png", //man image
-          reviews: "(300)",
-          dashboardImage: "https://raw.githubusercontent.com/admin-dashboards/static/master/bootstrap-dashboard-argon-intro.gif" //Dashboard Image
+        title: "Cyber Security Mentorship Program",
+        description: "Learn how to protect systems and data from cyber attacks in this 14-week immersive mentorship program.",
+        targetJob: "Cyber Security Expert",
+        duration: ["14 Weeks", "90"],
+        image1: "https://raw.githubusercontent.com/admin-dashboards/static/master/bootstrap-dashboard-argon-intro.gif", //Dashboard Image 
+        image2: "./images/mentor-ship-4.png", //man image
+        reviews: "(300)",
+        dashboardImage: "https://raw.githubusercontent.com/admin-dashboards/static/master/bootstrap-dashboard-argon-intro.gif" //Dashboard Image
       },
       "App Development": {
-          title: "App Development Mentorship Program",
-          description: "Master mobile app development for iOS and Android with hands-on projects and expert guidance over 20 weeks.",
-          targetJob: "App Developer",
-          duration: ["20 Weeks", "120"],
-          image1: "https://support.mparticle.com/hc/article_attachments/11853271735309",//Dashboard Image
-          image2: "./images/mentor-ship-5.png",//man image
-          reviews: "(450)",
-          dashboardImage: "https://support.mparticle.com/hc/article_attachments/11853271735309"//Dashboard Image
+        title: "App Development Mentorship Program",
+        description: "Master mobile app development for iOS and Android with hands-on projects and expert guidance over 20 weeks.",
+        targetJob: "App Developer",
+        duration: ["20 Weeks", "120"],
+        image1: "https://support.mparticle.com/hc/article_attachments/11853271735309",//Dashboard Image
+        image2: "./images/mentor-ship-5.png",//man image
+        reviews: "(450)",
+        dashboardImage: "https://support.mparticle.com/hc/article_attachments/11853271735309"//Dashboard Image
       }
-  };
-  function updateContent() {
+    };
+    function updateContent() {
       const selectedProgram = mentorshipSelect.value;
       programTitle.textContent = programsData[selectedProgram].title;
       programDescription.textContent = programsData[selectedProgram].description;
@@ -689,63 +607,56 @@ startAutoSlide();
       mentorshipImages[1].src = programsData[selectedProgram].image2;
       programReviews.textContent = programsData[selectedProgram].reviews;
       dashboardImage.src = programsData[selectedProgram].dashboardImage;
-  }
-  mentorshipSelect.addEventListener('change', updateContent);
-  updateContent();
-</script>
- <!-- Mentor Ship Programs Emd -->
-
-
-
-
-
-
-<!-- /* Our Stand Out Works */ -->
-<!-- Slider -->
-<div class="slider-container">
-    
+    }
+    mentorshipSelect.addEventListener('change', updateContent);
+    updateContent();
+  </script>
+  <!-- Mentor Ship Programs Emd -->
+   
+  <!-- /* Our Stand Out Works */ -->
+  <!-- Slider -->
+  <div class="slider-container">
     <div class="slider">
-        <!-- Slide 1 -->
-        <div class="slide">
-<div id="our-stand-out-works-main-container">
-    <div id="our-stand-out-works-left">
-        <div id="our-stand-out-works-second-left">
-        <h4>Our Standout Works</h4>
-        <h1>Food Delivery App</h1>
-        <h3>Food Delivery App - Optimized for Seamless Ordering</h3>
-        <p>We crafted a feature-rich food delivery solution that enhances order management, streamlines logistics, and improves customer engagement. The app integrates AI-driven recommendations, real-time order tracking, and secure payment gateways, ensuring a smooth user experience while enabling restaurant partners to scale efficiently.</p>
-        <ul>
-            <li>✔ AI-powered recommendations for better customer engagement</li>
-            <li>✔ Integrated tracking for real-time delivery updates</li>
-            <li>✔ Secure, multi-payment support for a hassle-free experience</li>
-        </ul>
-        <div id="our-stand-out-works-left-button-container">
-            <button>Request a Free Demo</button>
-            <button>Visit Customer App</button>
+      <!-- Slide 1 -->
+      <div class="slide">
+        <div id="our-stand-out-works-main-container">
+          <div id="our-stand-out-works-left">
+            <div id="our-stand-out-works-second-left">
+              <h4>Our Standout Works</h4>
+              <h1>Food Delivery App</h1>
+              <h3>Food Delivery App - Optimized for Seamless Ordering</h3>
+              <p>We crafted a feature-rich food delivery solution that enhances order management, streamlines logistics, and improves customer engagement. The app integrates AI-driven recommendations, real-time order tracking, and secure payment gateways, ensuring a smooth user experience while enabling restaurant partners to scale efficiently.</p>
+              <ul>
+                <li>✔ AI-powered recommendations for better customer engagement</li>
+                <li>✔ Integrated tracking for real-time delivery updates</li>
+                <li>✔ Secure, multi-payment support for a hassle-free experience</li>
+              </ul>
+              <div id="our-stand-out-works-left-button-container">
+                <button>Request a Free Demo</button>
+                <button>Visit Customer App</button>
+              </div>
+            </div>
+          </div>
+          <div id="our-stand-out-works-right">
+            <img src="https://iapptechnologies.com/uploads/1743418043.webp" alt="">
+          </div>
         </div>
-    </div>
-    </div>
-    <div id="our-stand-out-works-right">
-        <img src="https://iapptechnologies.com/uploads/1743418043.webp" alt="">
-    </div>
-</div>
-        </div>
-        <!-- end -->
-
-        <!-- Slide 2 -->
-        <div class="slide">
-<div id="our-stand-out-works-main-container">
-    <div id="our-stand-out-works-left">
-        <div id="our-stand-out-works-second-left">
-        <h4>Our Standout Works</h4>
-        <h1>IPTV</h1>
-        <h3>IPTV - +Advanced streaming Experience</h3>
-        <p>We crafted a feature-rich food delivery solution that enhances order management, streamlines logistics, and improves customer engagement. The app integrates AI-driven recommendations, real-time order tracking, and secure payment gateways, ensuring a smooth user experience while enabling restaurant partners to scale efficiently.</p>
-        <ul>
-            <li>✔ AI-powered recommendations for better customer engagement</li>
-            <li>✔ Integrated tracking for real-time delivery updates</li>
-            <li>✔ Secure, multi-payment support for a hassle-free experience</li>
-        </ul>
+      </div>
+      <!-- end -->
+      <!-- Slide 2 -->
+      <div class="slide">
+        <div id="our-stand-out-works-main-container">
+          <div id="our-stand-out-works-left">
+            <div id="our-stand-out-works-second-left">
+              <h4>Our Standout Works</h4>
+              <h1>IPTV</h1>
+              <h3>IPTV - +Advanced streaming Experience</h3>
+              <p>We crafted a feature-rich food delivery solution that enhances order management, streamlines logistics, and improves customer engagement. The app integrates AI-driven recommendations, real-time order tracking, and secure payment gateways, ensuring a smooth user experience while enabling restaurant partners to scale efficiently.</p>
+              <ul>
+                <li>✔ AI-powered recommendations for better customer engagement</li>
+                <li>✔ Integrated tracking for real-time delivery updates</li>
+                <li>✔ Secure, multi-payment support for a hassle-free experience</li>
+              </ul>
         <div id="our-stand-out-works-left-button-container">
             <button>Request a Free Demo</button>
             <button>Visit Customer App</button>
@@ -1406,7 +1317,7 @@ enterprise_showImages();
 <div id="whatsapp-popup-main-container">
     <span onclick="closeWhatsappPopup()">X</span>
     <div id="whatsapp-icon-container">
-      <img src="https://img.icons8.com/?size=100&id=16733&format=png&color=f9ca29" alt="">
+      <img src="https://img.icons8.com/?size=100&id=16733&format=png&color=f7c82d" alt="">
       <a id="Whatsapp-number" href="https://api.whatsapp.com/send?phone=447463151997" target="_blank" title="Whatsapp Number">+ 447463151997</a>
     </div>
     <p>Please send your query or requirements in detail via whatsapp, and we will respond shortly. <br> Thank you!</p>

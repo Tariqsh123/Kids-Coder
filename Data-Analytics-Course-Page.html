@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="title" content="Kids Coder | Learn, Play, Code">
+  <meta name="description" content="Kids Coder - A fun and interactive platform where kids learn to code through play and creativity.">
+  <meta name="keywords" content="kids coding, learn programming, coding for children, kids tech, code games, STEM, beginner coding, interactive coding, education, technology for kids">
+  <meta name="author" content="Kids Coder">
+  <meta name="publisher" content="Kids Coder">
+  <meta name="robots" content="index, follow">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://tariqsh123.github.io/Kids-Coder/Schedule-Demo.html">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/Logo.png">
+
+  <!-- Title -->
+  <title>Data-Analytics Course Page | Kids Coder</title>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css?family=Arvo:400,700" rel="stylesheet">
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
+
+  <!-- Your Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="Data-Analytics.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+     
+    <div id="Pro-Base">
+      <div id="base">
+        <p>Powered By</p>
+        <a href="https://thebravenext.com/"><img src="	https://www.thebravenext.com/Images/the-brave-next-main-logo.png" alt=""></a>
+      </div>
+    </div>
+  
+    <nav class="navbar navbar-expand-lg bg-light" >
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html" title="">
+          <img src="./images/Logo.png" title="" alt=""id="logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">MENU</button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+          <ul class="navbar-nav">        
+            <!-- RESOURCE-->
+            <li class="nav-item" id="hide-nav-item">
+              <a class="nav-link" id="resource-first-nav-item" class="drop-item" onclick="resourceToggleDropdown()">Courses<span id="dot"></span></a>
+              <div class="resource-dropdown-content" id="resource-dropdown-menu">
+                <span class="resource-close-button" onclick="resourceCloseDropdown()">x</span> 
+                <div id="resource-product-dropdown-container">
+                  <div id="resource-product-dropdown-mid">
+                    <div id="resource-product-dropdown-mid-top">
+                      <h6 class="resource-hoverable" id="resource-product-dropdown-content1"><a href="Data-Analytics-Course-Page.html">Data Analytics</a></h6>
+                      <h6 class="resource-hoverable" id="resource-product-dropdown-content2"><a href="#">Digital Marketing</a></h6>
+                      <h6 class="resource-hoverable" id="resource-product-dropdown-content3"><a href="#">Web Development</a></h6>
+                      <h6 class="resource-hoverable" id="resource-product-dropdown-content5"><a href="#">App Development</a></h6>
+                      <h6 class="resource-hoverable" id="resource-product-dropdown-content4"><a href="#">Cyber Security</a></h6>
+                    </div>
+                    <div id="resource-product-dropdown-mid-bottom">
+                      <div id="resource-product-dropdown-mid-bottom-container">
+                        <div id="resource-product-dropdown-mid-bottom-container-follow-container">
+                          <span id="dot"></span> <h6 >Follow Us</h6>
+                        </div>
+                        <div id="resource-product-dropdown-mid-bottom-container-icon">
+                          <a href="#" class="resource-linkedin-icon">
+                            <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/facebook-f.png" title="Facebook icon" alt="Facebook icon"/>
+                          </a>
+                          <a href="#" class="resource-linkedin-icon">
+                            <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/twitterx--v2.png" title="Twitter icon" alt="Twitter icon"/>
+                          </a>
+                          <a href="#" class="resource-linkedin-icon">
+                            <img width="50" height="50"  src="https://img.icons8.com/ios-filled/50/instagram-new--v1.png"  title="Instagram icon" alt="Instagram icon"/>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div id="resource-product-dropdown-right">
+                    <div id="resource-product-dropdown-right-container">
+                      <div id="resource-product-image"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <!-- RESOURCE END-->
+            <script>
+              function resourceToggleDropdown() {
+                var resourceDropdownMenu = document.getElementById('resource-dropdown-menu');
+                if (resourceDropdownMenu.style.display === 'block') {
+                  resourceCloseDropdown();
+                }
+                else {
+                  resourceDropdownMenu.style.display = 'block'; 
+                }
+              }
+              function resourceCloseDropdown() {
+                var resourceDropdownMenu = document.getElementById('resource-dropdown-menu');
+                resourceDropdownMenu.style.display = 'none'; 
+              }
+              document.addEventListener('click', function(event) {
+                var resourceDropdownMenu = document.getElementById('resource-dropdown-menu');
+                var resourceDropdownToggle = document.getElementById('resource-nav-item');
+                if (resourceDropdownMenu && resourceDropdownToggle && 
+                !resourceDropdownMenu.contains(event.target) && 
+                !resourceDropdownToggle.contains(event.target)) {
+                  resourceCloseDropdown(); 
+                }
+              });
+              document.addEventListener('keydown', function(event) {
+                if (event.key === "Escape") {
+                  resourceCloseDropdown();
+                }
+              });
+              // RESOURCE IMAGE
+              const resourceImages = {
+                "resource-product-dropdown-content1": "https://d1ng1bucl7w66k.cloudfront.net/ghost-blog/2023/06/Screen-Shot-2023-06-20-at-5.21.51-PM.png",
+                "resource-product-dropdown-content2": "https://www.kiddy123.com/custom/domain_1/image_files/sitemgr_photo_55002.jpg",
+                "resource-product-dropdown-content3": "https://d1ng1bucl7w66k.cloudfront.net/ghost-blog/2021/10/Screen-Shot-2021-10-26-at-4.12.49-PM.png",
+                "resource-product-dropdown-content4": "https://ociso.ucla.edu/sites/default/files/styles/sf_landscape_16x9/public/media/images/january-security-privacy-online_v3_0.png?h=b508fa70&itok=L1hIhBmL",
+                "resource-product-dropdown-content5": "https://miro.medium.com/v2/resize:fit:500/1*x2YA9tPfUSD1DtKGq7q6_g.png"
+              };
+              const resourceProductImage = document.getElementById('resource-product-image');
+              if (resourceProductImage) {
+                resourceProductImage.style.backgroundImage = `url(${resourceImages["resource-product-dropdown-content1"]})`;
+              }
+              const resourceHoverableElements = document.querySelectorAll('.resource-hoverable');
+              resourceHoverableElements.forEach(element => {
+                element.addEventListener('mouseover', function() {
+                  const resourceImageId = this.id; 
+                  const resourceImagePath = resourceImages[resourceImageId]; 
+                  if (resourceImagePath) {
+                    resourceProductImage.style.backgroundImage = `url(${resourceImagePath})`; 
+                  }
+                });
+              });
+              document.addEventListener('click', function(event) {
+                var resourceDropdownMenu = document.getElementById('resource-dropdown-menu');
+                var resourceLink = document.getElementById('resource-first-nav-item');
+                if (!resourceDropdownMenu.contains(event.target) && !resourceLink.contains(event.target)) {
+                  resourceDropdownMenu.style.display = 'none';
+                }
+              });
+            </script>
+            <li class="nav-item">
+              <a class="nav-link" id="industry-first-nav-item" href="#" title="">Programs<span id="dot"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="technology-first-nav-item"  href="#" title="">Camps <span id="dot"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="company-first-nav-item" href="#" title="" >Blog <span id="dot"></span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="technology-first-nav-item"  href="#" title="">About Us<span id="dot"></span></a>
+            </li>
+            <li  id="last-nav-item">
+              <a class="nav-link" href="Schedule-Demo.html" id="last-nav-link" title=" Page">Schedule Demo <span id="last-dot"></span></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <script>
+      // MENU
+      document.addEventListener('DOMContentLoaded', function () {
+        var toggler = document.querySelector('.navbar-toggler');
+        toggler.addEventListener('click', function () {
+          if (this.textContent.trim() === 'MENU') {
+            this.textContent = 'CLOSE';
+          }
+          else{
+            this.textContent = 'MENU';
+          }
+        });
+      });
+    </script>
+    <!-- Navbar END -->
+
+
+
+<div id="Data-Analytics-course-page-header">
+    <div id="Data-Analytics-course-page-header-left">
+        <h1>Data Analytics Mentorship Program</h1>
+        <h3>Data Analytics Course</h3>
+        <p>Join this 16 weeks, Job-ready Program to master Data Analytics from scratch with Top Data Analysts from Microsoft, KPMG, Amazon, and Rapido.</p>
+        <div id="Data-Analytics-course-page-header-left-total-container">
+            <div id="Data-Analytics-course-header-left-total-inner-box">
+                <h6>11rs LPA</h6>
+                <p>Average CTC</p>
+            </div>
+            <div id="Data-Analytics-course-header-left-total-inner-box">
+                <div id="Data-Analytics-course-header-left-total-inner-box-top">
+                    <img src="https://img.icons8.com/ios-filled/50/f7c82d/linkedin.png" alt=""><h6>34000+</h6>
+                </div>
+                <p>Jobs on LinkedIn Alone</p>
+            </div>
+            <div id="Data-Analytics-course-header-left-total-inner-box">
+                <div id="Data-Analytics-course-header-left-total-inner-box-top">
+                    <img src="https://img.icons8.com/?size=100&id=53422&format=png&color=f7c82d" alt=""><h6>7+</h6>
+                </div>
+                <p>Industry Mentors</p>
+            </div>
+        </div>
+        <div id="Data-Analytics-course-page-header-left-button-container">
+            <button>Talk To Program Advisor</button>
+            <p>3,785 already upskilled!</p>
+        </div>
+
+    </div>
+    <div id="Data-Analytics-course-page-header-right">
+      <div id="Data-Analytics-course-page-header-right-card-container">
+        <div id="Data-Analytics-course-page-header-right-card-img-container">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7jmKW1Kx7VZ6VuvykZcOrF2OrvzLgezdSrg&s" alt="">
+        </div>
+        <div id="Data-Analytics-course-page-header-right-card-mid-container">
+          <span>Early Bird Offer</span>
+          <p>40% off for First 50 Seats</p>
+        </div>
+        <div id="Data-Analytics-course-page-header-right-card-bottom-container">
+          <div id="Data-Analytics-course-page-header-right-card-bottom-inner-container">
+            <p>Total Program Fee:</p>
+            <div id="Data-Analytics-Course-Page-header-right-card-bottom-inner-price-container">
+              <h3>89,000 rs</h3>
+              <h4>50,000 rs</h4>
+              <span>-40% off</span>
+            </div>
+            <button>Apply Now</button>
+            <b>By continuing, you agree to WsCube Tech’s <a href="privacy.html" target="_blank"> Privacy Policy</a> and <a href="legal.html" target="_blank"> Terms & Conditions</a>. Please note that the Cohort Fee can be paid via custom payment link offered by Program Advisor at the point of enrollment only and we don’t offer any public link for payments.</b>
+          </div>
+        </div>      
+      </div>
+    </div>
+</div>
+
+  
+
+
+ <!-- Footer -->
+ <footer>
+   <div id="footer-main-container">
+       <div id="footer-second-main-container">
+               <div id="footer-left-container">
+                   <div id="footer-left-items">
+                       <div id="footer-left-text"><span id="dot"></span><h6 class="all-h6" style="opacity: 1;">Follow Us</h6></div>
+                       <div id="social-icons-container">
+                      <!-- 1 -->
+                    <a href="#" title="#">
+                       <img width="50" height="50" src="https://img.icons8.com/ios-glyphs/30/1A1A1A/linkedin-2--v1.png" title="" alt=""/>
+                   </a>
+                   <!-- 2 -->
+                   <a href="#" title="">
+                       <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/facebook-f.png" title="" alt=""/>
+                   </a>
+                   
+                   <!-- 3 -->
+                   <a href="#" title="">
+                       <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/instagram-new.png" title="" alt=""/>
+                   </a>
+                   <!-- 6 -->
+                   <a href="#" title="">
+                       <img width="50" height="50" src="https://img.icons8.com/windows/32/1A1A1A/pinterest-p.png" title="" alt=""/>
+                   </a>
+                   <!-- 7 -->
+                   <a href="#" title="#">
+                       <img width="50" height="50" src="https://thebravenext.netlify.app/Images/Threads.png" title="#" alt=""/>
+                   </a>
+                      <!-- 4 -->
+                   <a href="#" title="">
+                       <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/youtube-play.png" title="" alt=""/>
+                   </a>
+                   <!-- 5 -->
+                   <a href="#" title="">
+                       <img width="50" height="50" src="https://thebravenext.netlify.app/Images/titkok.png" title="" alt=""/>
+                   </a>
+                       </div>             
+                   </div>        
+               </div>
+           <div id="footer-mid1-container">
+               <div id="footer-mid1-top">
+                   <div id="footer-left-text"><span id="dot"></span><h6 class="all-h6" style="opacity: 1;">News Letter</h6></div>
+               </div>
+               <div id="footer-mid1-mid">
+                   <form id="email-form">
+                       <input type="email" id="email-input" placeholder="Email Address" required>
+                       <button type="submit">                                
+                        <img src="https://img.icons8.com/ios-filled/100/FFFFFF/new-post.png" alt="" title="">
+                       </button>
+                   </form>
+               </div>
+               <div id="footer-mid1-bottom">
+                   <p>We require the contact information you provide to reach out regarding our products and services. You can unsubscribe from these communications at any time. For details on how to unsubscribe and to learn more about our privacy practices and our commitment to protecting your information, please refer to our Privacy Policy.</p>
+               </div>
+           </div>
+           <div id="footer-mid2-container">
+               <div id="footer-mid2-ul">
+                   <h4 style="color: #ffc41b;-webkit-text-stroke: 1px #f5be09;">Links</h4>
+                   <a href="#" title="#">Courses</a>
+                   <a href="#" title="#">Programs</a>
+                   <a href="#" title="#">Camps</a>
+                   <a href="#" title="#">Blog</a>
+                   <a href="#" title="#">About Us</a>
+                   <a href="#" title="#">Schedule Demo</a>
+           </div>
+           </div>
+           <div id="footer-right-container">
+               <div id="footer-mid2-ul">
+                   <span style=" font-size:x-large; color:#ffc41b;-webkit-text-stroke: 1px #f5be09;">Topics</span>
+                   <span>Coding</span>
+                   <span>Learning</span>
+                   <span >Creativity</span>
+                   <span >Projects</span>
+                   <span>Resources</span>                    
+               </div>
+           </div>
+       </div>
+   </div>
+</footer>
+<!-- Footer  END-->
+
+<!-- Last Footer -->
+<div id="last-footer-main-container">
+   <div id="last-footer-top">
+       <div id="last-footer-top-left">
+           <img src="./images/Logo.png" title="" alt=""/>
+           <a href="Schedule-Demo.html"> <button>Contact Us</button></a>
+
+       </div>
+       <div id="last-footer-top-right">
+           <h2>Stay Connected</h2>
+           <div id="address-container">
+               <img src="https://img.icons8.com/ios-filled/100/FFFFFF/marker.png" alt="" title="">
+               <p>20 Wenlock Road, London, N1 7GU</p>
+           </div>
+           <div id="contact-container">
+               <img src="https://img.icons8.com/ios-filled/100/FFFFFF/whatsapp--v1.png" alt="" title="">
+               <p id="footer-whatsapp-link">
+                   <a style="color: #ffc41b;text-decoration:none;" href="#" title=""> + 447463151997</a>
+                 </p>
+                 
+           </div>
+       </div>
+   </div>
+   <div id="last-footer-bottom">
+       <div id="last-footer-bottom-left">
+           <p>© Copyrights 2024. All Rights Reserved. Powered by <a href="https://thebravenext.com/" style="color: green; text-decoration:none;" title="">The Brave Next</a></p>
+       </div>
+       <div id="last-footer-bottom-mid">
+        <a href="legal.html" title="">Legal</a>
+        <a href="privacy.html" title="">Privacy Policy</a>
+       </div>
+       <div id="last-footer-bottom-right">
+       </div>
+   </div>
+</div>
+<!-- Last Footer END -->
+
+<!-- Whatsapp Popup -->
+<div id="whatsapp-popup-main-container">
+    <span onclick="closeWhatsappPopup()">X</span>
+    <div id="whatsapp-icon-container">
+      <img src="https://img.icons8.com/?size=100&id=16733&format=png&color=f7c82d" alt="">
+      <a id="Whatsapp-number" href="https://api.whatsapp.com/send?phone=447463151997" target="_blank" title="Whatsapp Number">+ 447463151997</a>
+    </div>
+    <p>Please send your query or requirements in detail via whatsapp, and we will respond shortly. <br> Thank you!</p>
+  </div>
+  
+  <script>
+    let popupTimeout; 
+    let showAgainTimeout;  
+    function showWhatsappPopup() {
+      const popup = document.getElementById('whatsapp-popup-main-container');
+      popup.style.display = 'flex';
+      popupTimeout = setTimeout(() => {
+        popup.style.display = 'none';
+        showAgainTimeout = setTimeout(showWhatsappPopup, 10000);
+      }, 15000);
+    }
+    function closeWhatsappPopup() {
+      const popup = document.getElementById('whatsapp-popup-main-container');
+      popup.style.display = 'none';
+      clearTimeout(popupTimeout); 
+      showAgainTimeout = setTimeout(showWhatsappPopup, 10000);
+    }
+    window.addEventListener('load', function () {
+      setTimeout(showWhatsappPopup, 2000);
+    });
+  </script>
+  <!-- Whatsapp Popup -->
+
+<!-- Whatsapp Floating right -->
+<div id="whatsapp-float-right">
+    <a href="https://api.whatsapp.com/send?phone=447463151997" title="Whatsapp-Link"><img src="./images/whatsapp.png" alt="Whatsapp-icon" title="Whatsapp icon"></a>
+ </div>
+<!-- Whatsapp Floating right -->
+
+<!-- Bootstrap Link -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
