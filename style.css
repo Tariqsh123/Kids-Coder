@@ -7477,7 +7477,7 @@ html, body {
     transition: background-color 0.3s;
     font-size: small;
 }
-#last-footer-top-left button::before{
+#last-footer-top-left button::before {
     content: '•'; 
     position: absolute;
     left: 10px; 
@@ -7486,9 +7486,14 @@ html, body {
     font-size: 20px; 
     color: white; 
 }
-#last-footer-top-left button:hover{
-    background-image: linear-gradient(to right,#f7c82d,#f7c82d); 
+#last-footer-top-left button:hover {
+    background-image: linear-gradient(to right, #f7c82d, #f7c82d); 
+    color: black;
 }
+#last-footer-top-left button:hover::before {
+    color: black;
+}
+
 #last-footer-top-left span{
     color: #fff;
     font-size: medium;
@@ -7581,13 +7586,13 @@ html, body {
 #last-footer-bottom-mid a{
     text-decoration: none;
     padding-right: 5px;
-    font-size: x-small;
+    font-size: small;
     color: white;
     cursor: pointer;
     border-right: 1px solid white;
 }
 #last-footer-bottom-mid a:hover{
-    color: #636363;
+    color: #f7c82d;
 }
 #last-footer-bottom-right{
     width: 20%;
@@ -8449,16 +8454,26 @@ html, body {
     height: 100px;
     width: 100px;
     position: fixed;
-    bottom: 0;
+    bottom: 0px;
     display: flex;
     z-index: 9999;
     justify-content: center;
     align-items: center;
-    right: 0;
+    right: 20px;
 }
 #whatsapp-float-right img{
     height: 70px;
     width: auto;
+}
+@media (min-width: 2000px){
+    #whatsapp-float-right img{
+        height: 120px;
+        width: auto;
+    }
+    #whatsapp-float-right {
+        height: 150px;
+        width: 150px;
+    }
 }
 /* Whatsapp Float */
 
@@ -9145,39 +9160,6 @@ html, body {
     }
     }
 /* Our Global Presence  End*/
-
-/* Back To Top */
-#back-to-top-container {
-    height: 80px;
-    width: 80px;
-    position: fixed;
-    bottom: 80px;
-    right: 10px;
-    z-index: 9999;
-    display: none;
-    justify-content: center;
-    align-items: center;
-}
-#back-to-top-button {
-    height: 40px;
-    width: 40px;
-    border: 2px solid white;
-    cursor: pointer;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white;
-    border-radius: 50%;
-    font-weight: 900;
-    transition: all 0.2s;
-    font-size: large;
-}
-#back-to-top-button:hover {
-    background-color: #f7c82d;
-}
-
-/* Back To Top emd */
 
 
 /* popup-box-onload- */
