@@ -31,6 +31,7 @@
 #schedule-top-container h2{
     color: #f9ca29;
     font-weight: 900;
+    -webkit-text-stroke: 1px #f5be09;
 }
 #schedule-top-container p{
     color: white;
@@ -233,8 +234,4 @@
 
 #footer-mid1-mid input {
     border-radius: 0;
-}
-#footer-main-container {
-    margin-top: 50px;
-    width: 100vw;
 }

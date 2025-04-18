@@ -20,7 +20,12 @@
   <title>Kids Coder | Learn, Play, Code</title>
 
   <!-- Google Font -->
+  <!-- Arvo -->
   <link href="https://fonts.googleapis.com/css?family=Arvo:400,700" rel="stylesheet">
+  <!-- Akaya -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Akaya+Kanadaka&family=Rampart+One&display=swap" rel="stylesheet">
 
   <!-- Bootstrap -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0/css/bootstrap.min.css">
@@ -276,41 +281,29 @@ document.addEventListener('DOMContentLoaded', function () {
             <img id="second-img" src="" alt="">
         </div>
         
-        <style>
-        #second-img {
-            transition: opacity 0.8s ease-in-out;
-        }
-        </style>
-        
         <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const baseImages = [
-                    "https://raw.githubusercontent.com/Tariqsh123/Kids-Coder/refs/heads/main/images/Header-Right-Float-img1.png",
-                    "https://raw.githubusercontent.com/Tariqsh123/Kids-Coder/refs/heads/main/images/Header-Right-Float-img2.png",
-                    "https://raw.githubusercontent.com/Tariqsh123/Kids-Coder/refs/heads/main/images/Header-Right-Float-img3.png",
-                    "https://raw.githubusercontent.com/Tariqsh123/Kids-Coder/refs/heads/main/images/Header-Right-Float-img4.png",
-                    "https://raw.githubusercontent.com/Tariqsh123/Kids-Coder/refs/heads/main/images/Header-Right-Float-img3.png"
-                ];
-                
-                const images = Array(10).fill(baseImages).flat();
-                let headercurrentIndex = 0;
-                const secondImg = document.getElementById('second-img');
-                secondImg.src = images[headercurrentIndex];
-            
-                function changeImage() {
-                    headercurrentIndex = (headercurrentIndex + 1) % images.length;
-                    secondImg.style.opacity = 0;
-            
-                    setTimeout(() => {
-                        secondImg.src = images[headercurrentIndex];
-                        secondImg.style.opacity = 1;
-                    }, 500);
-                }
-            
-                setInterval(changeImage, 10000);
-            });
-            
-        </script>
+          document.addEventListener("DOMContentLoaded", function () {
+              const baseImages = [
+                  "./images/Header-Right-Float-img1.png",
+                  "./images/Header-Right-Float-img2.png",
+                  "./images/Header-Right-Float-img3.png",
+                  "./images/Header-Right-Float-img4.png"
+              ];
+              
+              const images = Array(10).fill(baseImages).flat();
+              let headercurrentIndex = 0;
+              const secondImg = document.getElementById('second-img');
+              secondImg.src = images[headercurrentIndex];
+      
+              function changeImage() {
+                  headercurrentIndex = (headercurrentIndex + 1) % images.length;
+                  secondImg.src = images[headercurrentIndex];
+              }
+      
+              setInterval(changeImage, 10000);
+          });
+      </script>
+      
         
         
         
@@ -1018,7 +1011,7 @@ startAutoSlide();
 <!-- Logo slider -->
  <div id="enterprise-main-container">
     <div id="enterprise-second-main-container">
-        <div id="enterprise-heading">Explore the World of Code</div>
+        <div id="enterprise-heading">Explore the World of <span>Code</span></div>
         <div id="enterprise-img-container"></div>
     </div>
 </div>
@@ -1226,7 +1219,6 @@ enterprise_showImages();
     const heading = messageBox.querySelector('h6');
     const address = messageBox.querySelector('p');
     const phone = messageBox.querySelector('a');
-    
     h2Elements.forEach(h2 => {
       h2.addEventListener('mouseenter', () => {
         h2Elements.forEach(el => el.classList.remove('active'));
@@ -1239,8 +1231,6 @@ enterprise_showImages();
         phone.textContent = ph;
       });
     });
-  
-    // Trigger 'mouseenter' for the USA country on load
     const usaElement = document.querySelector('h2[data-country="USA"]');
     if (usaElement) {
       usaElement.dispatchEvent(new Event('mouseenter'));
@@ -1251,6 +1241,46 @@ enterprise_showImages();
     
 <!-- Our Global Presence End -->
 
+
+
+<!-- PopUp Box On Load -->
+<div id="popup-box-onload-overlay" class="hidden">
+  <div id="popup-content">
+    <button id="close-popup">X</button>
+    <h1>What’s the best way to prepare kids for the future?</h1>
+    <h3>Teach them to code with Kids Coder – fun, simple & powerful!</h3>
+    <p>Join Kids Coder now and spark your child’s tech journey!</p>
+    <img src="./images/React.png" alt="" id="Popup-react-image">
+    <a href="./Schedule-Demo.html">Join Us Now !</a>
+  </div>
+</div>
+<script>
+  window.addEventListener('load', function () {
+    const popup = document.getElementById('popup-box-onload-overlay');
+    const popupContent = document.getElementById('popup-content');
+    const closeBtn = document.getElementById('close-popup');
+
+    setTimeout(() => {
+      popup.classList.remove('hidden');
+      popupContent.classList.remove('pop-animate');
+      void popupContent.offsetWidth; 
+      popupContent.classList.add('pop-animate');
+
+      var autoClose = setTimeout(() => {
+        popup.classList.add('hidden');
+        popupContent.classList.remove('pop-animate');
+      }, 20000);
+
+      closeBtn.addEventListener('click', () => {
+        popup.classList.add('hidden');
+        popupContent.classList.remove('pop-animate');
+        clearTimeout(autoClose);
+      });
+    }, 3000);
+  });
+</script>
+
+<!-- PopUp Box On Load end -->
 
 
  <!-- Footer -->
@@ -1311,7 +1341,7 @@ enterprise_showImages();
            </div>
            <div id="footer-mid2-container">
                <div id="footer-mid2-ul">
-                   <h4 style="color: #ffc41b;">Links</h4>
+                   <h4 style="color: #ffc41b;-webkit-text-stroke: 1px #f5be09;">Links</h4>
                    <a href="#" title="#">Courses</a>
                    <a href="#" title="#">Programs</a>
                    <a href="#" title="#">Camps</a>
@@ -1322,7 +1352,7 @@ enterprise_showImages();
            </div>
            <div id="footer-right-container">
                <div id="footer-mid2-ul">
-                   <span style=" font-size:x-large; color:#ffc41b">Topics</span>
+                   <span style=" font-size:x-large; color:#ffc41b;-webkit-text-stroke: 1px #f5be09;">Topics</span>
                    <span>Coding</span>
                    <span>Learning</span>
                    <span >Creativity</span>
