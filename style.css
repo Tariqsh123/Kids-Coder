@@ -978,17 +978,16 @@ html, body {
 }
 .After-header-carousel-track {
     display: flex;
-    gap: 10px;
+    gap: 50px;
     width: 100%;
     transition: transform 0.5s ease-in-out;
 }
 .After-header-card {
-    flex: 0 0 25%;
+    flex: 0 0 22%;
     height: 370px;
     box-sizing: border-box;
     position: relative;
     cursor: pointer;
-   
 }
 .After-header-card-inner {
     background: white;
@@ -1009,9 +1008,9 @@ html, body {
     position: absolute;
     top: 0;
     transform: translate(0%,-30%);
-    width: 100px;
+    width: 80px;
     background-color: white;
-    height: 100px;
+    height: 80px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -1019,12 +1018,12 @@ html, body {
     background-color: #f7c82d;
 }
 #img-container img{
-    height: 70px;
+    height: 50px;
     object-fit: contain;
-    width: 70px;
+    width: 50px;
 }
 .After-header-card h2{
-    font-size: x-large;
+    font-size: large;
     color: #000;
     font-weight: 900;
     text-transform: uppercase;
@@ -1043,7 +1042,6 @@ html, body {
     padding-left: 15px;
     padding-right: 15px;
 }
-  
   @media (max-width: 992px) {
     .After-header-card {
       flex: 0 0 33.33%;
